@@ -1,14 +1,21 @@
 # Groupname D4M
+
 ---
+
 ### Used Languages/Framework
+
 Set Up: Node Js => npm
 Frontend: (React.js, Tailwind.css)
 Libaries (optional):
 (Backend: PHP)
+
 ## Tech stack
+
 - Frontend: React, Next.js
 - Styling: Tailwind "bases"
+
 ## Repos Strucuture
+
 ```
 main
   \
@@ -18,17 +25,15 @@ main
 
 ```
 
-
 ## Project structure
 
-
-
 ---
+
 - How do we want to work together ?
   - Structured
   - Good communication
   - Supportive
-  - Disciplined 
+  - Disciplined
 - What is important to us while working ?
   - Fun
   - Learning/experience
@@ -42,23 +47,23 @@ main
   - CamelCase
   - Linters
   - No crendetials in repository
-- What experience do we bring ? 
-   On Scale 0-5
-  
+- What experience do we bring ?
+  On Scale 0-5
+
   | Teammember | Design | Frontend Dev | HTML,CSS, JS | Responsive Design | Frameworks |
-  | --- | --- | --- | --- | --- |  --- |
-  | Dominik | 1 | 4-5 | 5 | 4 | 3-4 |
-  | Melina | 3 | 4-5 | 4 | 5 | 4 |
-  | Mika | 1 | 2 | 0 | 0 | 0 |
-  | Marvin | 2 | 3 | 2 | 1 | 3 |
-  | Michael | 3 | 4 | 5 | 4 | 4 |
-  
+  | ---------- | ------ | ------------ | ------------ | ----------------- | ---------- |
+  | Dominik    | 1      | 4-5          | 5            | 4                 | 3-4        |
+  | Melina     | 3      | 4-5          | 4            | 5                 | 4          |
+  | Mika       | 1      | 2            | 0            | 0                 | 0          |
+  | Marvin     | 2      | 3            | 2            | 1                 | 3          |
+  | Michael    | 3      | 4            | 5            | 4                 | 4          |
+
 - What **don't** we want ?
-  -  Too many comments
-  -  Loading loops
-  -  Bootstrap
-  
+  - Too many comments
+  - Loading loops
+  - Bootstrap
 - What rituals do we want to implement into our sprints/work ?
+
   - Retrospective (everyone)
   - Planning
   - Breaks
@@ -68,7 +73,7 @@ main
   - Tests done
   - Happy customers
   - Feedback implemented
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+    This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
 
