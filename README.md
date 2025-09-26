@@ -1,11 +1,12 @@
 # Groupname D4M
 ---
 ### Used Languages/Framework
-Frontend: HTML,CSS,JS (Vue.js, Tailwind.css)
-Libaries (optional): https://prismic.io/blog/vue-component-libraries
+Set Up: Node Js => npm
+Frontend: (React.js, Tailwind.css)
+Libaries (optional):
 (Backend: PHP)
 ## Tech stack
-- Frontend: Vue 3, Vite, Vue Router
+- Frontend: React, Next.js
 - Styling: Tailwind "bases"
 ## Repos Strucuture
 ```
