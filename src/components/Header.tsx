@@ -20,20 +20,10 @@ export function Header() {
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-4">
             <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
-              <span
-                style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700 }}
-                className="text-white text-lg"
-              >
-                SE
-              </span>
+              <span className="text-white text-lg font-bold">SE</span>
             </div>
             <div>
-              <h1
-                style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700 }}
-                className="text-xl text-gray-900"
-              >
-                Schülerunternehmen
-              </h1>
+              <h1 className="text-xl text-gray-900 font-bold">Schülerunternehmen</h1>
               <p className="text-sm text-gray-600">BBS I</p>
             </div>
           </div>
