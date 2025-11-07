@@ -2,6 +2,7 @@
 import { Button } from './ui/button';
 import { Separator } from './ui/separator';
 import { MapPin, Phone, Mail } from 'lucide-react';
+import Link from 'next/link';
 
 export function Footer() {
   const scrollToSection = (sectionId: string) => {
@@ -37,7 +38,7 @@ export function Footer() {
             <h4 className="font-poppins font-semibold text-lg mb-4">Navigation</h4>
             <div className="flex flex-col items-start space-y-1">
               <Button variant="link" className="h-auto p-0 text-gray-300 hover:text-white" asChild>
-                <a href="#impressum">Impressum</a>
+                <Link href="/legal">Impressum</Link>
               </Button>
               <Button variant="link" className="h-auto p-0 text-gray-300 hover:text-white" asChild>
                 <a href="#datenschutz">Datenschutz</a>
