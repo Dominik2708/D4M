@@ -31,32 +31,32 @@ export function Header() {
           <NavigationMenu className="hidden lg:flex">
             <NavigationMenuList>
               <NavigationMenuItem>
-                <NavigationMenuLink className="text-gray-700 hover:text-primary transition-colors cursor-pointer px-4 py-2">
+                <NavigationMenuLink className="text-gray-700 transition-colors cursor-pointer px-4 py-2">
                   Produkte
                 </NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuLink className="text-gray-700 hover:text-primary transition-colors cursor-pointer px-4 py-2">
+                <NavigationMenuLink className="text-gray-700 transition-colors cursor-pointer px-4 py-2">
                   Quiz
                 </NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuLink className="text-gray-700 hover:text-primary transition-colors cursor-pointer px-4 py-2">
+                <NavigationMenuLink className="text-gray-700 transition-colors cursor-pointer px-4 py-2">
                   Über uns
                 </NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuLink className="text-gray-700 hover:text-primary transition-colors cursor-pointer px-4 py-2">
+                <NavigationMenuLink className="text-gray-700 transition-colors cursor-pointer px-4 py-2">
                   Termine
                 </NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuLink className="text-gray-700 hover:text-primary transition-colors cursor-pointer px-4 py-2">
+                <NavigationMenuLink className="text-gray-700 transition-colors cursor-pointer px-4 py-2">
                   Archiv
                 </NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuLink className="text-gray-700 hover:text-primary transition-colors cursor-pointer px-4 py-2">
+                <NavigationMenuLink className="text-gray-700 transition-colors cursor-pointer px-4 py-2">
                   Kontakt
                 </NavigationMenuLink>
               </NavigationMenuItem>
@@ -77,32 +77,32 @@ export function Header() {
           <NavigationMenu className="lg:hidden mt-4 pb-4 border-t border-gray-200 pt-4">
             <NavigationMenuList className="flex-col items-start space-y-2">
               <NavigationMenuItem>
-                <NavigationMenuLink className="text-left text-gray-700 hover:text-primary transition-colors py-2 cursor-pointer w-full">
+                <NavigationMenuLink className="text-left text-gray-700 transition-colors py-2 cursor-pointer w-full">
                   Produkte
                 </NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuLink className="text-left text-gray-700 hover:text-primary transition-colors py-2 cursor-pointer w-full">
+                <NavigationMenuLink className="text-left text-gray-700 transition-colors py-2 cursor-pointer w-full">
                   Quiz
                 </NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuLink className="text-left text-gray-700 hover:text-primary transition-colors py-2 cursor-pointer w-full">
+                <NavigationMenuLink className="text-left text-gray-700 transition-colors py-2 cursor-pointer w-full">
                   Über uns
                 </NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuLink className="text-left text-gray-700 hover:text-primary transition-colors py-2 cursor-pointer w-full">
+                <NavigationMenuLink className="text-left text-gray-700 transition-colors py-2 cursor-pointer w-full">
                   Termine
                 </NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuLink className="text-left text-gray-700 hover:text-primary transition-colors py-2 cursor-pointer w-full">
+                <NavigationMenuLink className="text-left text-gray-700 transition-colors py-2 cursor-pointer w-full">
                   Archiv
                 </NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuLink className="text-left text-gray-700 hover:text-primary transition-colors py-2 cursor-pointer w-full">
+                <NavigationMenuLink className="text-left text-gray-700 transition-colors py-2 cursor-pointer w-full">
                   Kontakt
                 </NavigationMenuLink>
               </NavigationMenuItem>
