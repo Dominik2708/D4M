@@ -1,14 +1,13 @@
 'use client';
 import { useState } from 'react';
+import Image from 'next/image';
 import { Button } from './ui/button';
 import { Menu, X } from 'lucide-react';
 import {
   NavigationMenu,
-  NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
 } from './ui/navigation-menu';
 
 export function Header() {
@@ -20,7 +19,7 @@ export function Header() {
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-4">
             <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
-              <span className="text-white text-lg font-bold">SE</span>
+              <Image src="/images/logo.png" alt="Logo" width={48} height={48} />
             </div>
             <div>
               <h1 className="text-xl text-gray-900 font-bold">Schülerunternehmen</h1>
