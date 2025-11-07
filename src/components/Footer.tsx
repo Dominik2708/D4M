@@ -38,10 +38,10 @@ export function Footer() {
             <h4 className="font-poppins font-semibold text-lg mb-4">Navigation</h4>
             <div className="flex flex-col items-start space-y-1">
               <Button variant="link" className="h-auto p-0 text-gray-300 hover:text-white" asChild>
-                <Link href="/legal">Impressum</Link>
+                <Link href="/impressum">Impressum</Link>
               </Button>
               <Button variant="link" className="h-auto p-0 text-gray-300 hover:text-white" asChild>
-                <a href="#datenschutz">Datenschutz</a>
+                <Link href="/datenschutz">Datenschutz</Link>
               </Button>
             </div>
           </div>
