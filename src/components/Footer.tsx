@@ -3,6 +3,7 @@ import { Button } from './ui/button';
 import { Separator } from './ui/separator';
 import { MapPin, Phone, Mail } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export function Footer() {
   const scrollToSection = (sectionId: string) => {
@@ -19,8 +20,8 @@ export function Footer() {
           {/* Company Info */}
           <div>
             <div className="flex items-center space-x-3 mb-4">
-              <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                <span className="font-poppins font-bold text-white">SE</span>
+              <div className="w-10 h-10 bg-white border-2 rounded-lg flex items-center justify-center">
+                <Image src="/images/logo.png" alt="Logo" width={32} height={32} />
               </div>
               <div>
                 <h3 className="font-poppins font-bold text-lg">Schülerunternehmen</h3>

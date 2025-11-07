@@ -18,7 +18,7 @@ export function Header() {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-4">
-            <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
+            <div className="w-12 h-12 border-2 rounded-lg flex items-center justify-center">
               <Image src="/images/logo.png" alt="Logo" width={48} height={48} />
             </div>
             <div>
