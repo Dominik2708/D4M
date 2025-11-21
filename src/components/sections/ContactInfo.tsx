@@ -1,6 +1,6 @@
 import { Mail, Phone, MapPin } from 'lucide-react';
 
-export function ContactInfo() {
+export default function ContactInfo() {
   const contactItems = [
     {
       icon: Mail,

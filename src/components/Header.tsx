@@ -10,7 +10,7 @@ import {
   NavigationMenuList,
 } from './ui/navigation-menu';
 
-export function Header() {
+export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (

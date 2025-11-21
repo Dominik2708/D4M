@@ -1,16 +1,18 @@
 import { ProductCard } from './ProductCard';
 
-export function ProductsSection() {
+export default function ProductsSection() {
   const products = [
     {
       title: 'Handgefertigte Notizbücher',
-      description: 'Individuell gestaltete Notizbücher aus recyceltem Papier - perfekt für Schule und Alltag',
+      description:
+        'Individuell gestaltete Notizbücher aus recyceltem Papier - perfekt für Schule und Alltag',
       gradientFrom: 'from-blue-400',
       gradientTo: 'to-blue-600',
     },
     {
       title: 'Öko-Schreibwaren',
-      description: 'Umweltfreundliche Stifte und Marker aus nachhaltigen Materialien für bewusste Schüler',
+      description:
+        'Umweltfreundliche Stifte und Marker aus nachhaltigen Materialien für bewusste Schüler',
       gradientFrom: 'from-green-400',
       gradientTo: 'to-green-600',
     },
@@ -45,8 +47,8 @@ export function ProductsSection() {
       <div className="container mx-auto">
         <h2 className="text-4xl font-bold text-center mb-4">Unsere Produkte</h2>
         <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-          Entdecken Sie unsere handverlesene Auswahl an Produkten, 
-          die mit Leidenschaft und Kreativität entwickelt wurden
+          Entdecken Sie unsere handverlesene Auswahl an Produkten, die mit Leidenschaft und
+          Kreativität entwickelt wurden
         </p>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {products.map((product, index) => (
