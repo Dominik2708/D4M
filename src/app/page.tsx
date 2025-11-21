@@ -7,7 +7,6 @@ import { AboutSection } from '../components/sections/AboutSection';
 import { TeamSection } from '../components/sections/TeamSection';
 import { EventsSection } from '../components/sections/EventsSection';
 import { ContactSection } from '../components/sections/ContactSection';
-import { Footer } from '../components/sections/Footer';
 
 export default function Home() {
   return (

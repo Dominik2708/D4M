@@ -21,8 +21,10 @@ export function ContactInfo() {
       title: 'Adresse',
       content: (
         <>
-          BBS I - Berufsbildende Schulen<br />
-          Musterstraße 123<br />
+          BBS I - Berufsbildende Schulen
+          <br />
+          Musterstraße 123
+          <br />
           12345 Musterstadt
         </>
       ),
