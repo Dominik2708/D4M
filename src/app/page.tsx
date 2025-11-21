@@ -1,12 +1,14 @@
-import { Footer } from '@/components/Footer';
-import { Header } from '../components/Header';
-import { HeroSection } from '../components/sections/HeroSection';
-import { FeaturesSection } from '../components/sections/FeaturesSection';
-import { ProductsSection } from '../components/sections/ProductsSection';
-import { AboutSection } from '../components/sections/AboutSection';
-import { TeamSection } from '../components/sections/TeamSection';
-import { EventsSection } from '../components/sections/EventsSection';
-import { ContactSection } from '../components/sections/ContactSection';
+import {
+  Header,
+  Footer,
+  HeroSection,
+  ProductsSection,
+  QuizSection,
+  AboutSection,
+  EventsSection,
+  ArchiveSection,
+  ContactSection,
+} from '@/components';
 
 export default function Home() {
   return (
@@ -14,14 +16,14 @@ export default function Home() {
       <Header />
       <main>
         <HeroSection />
-        <FeaturesSection />
         <ProductsSection />
+        <QuizSection />
         <AboutSection />
-        <TeamSection />
         <EventsSection />
+        <ArchiveSection />
         <ContactSection />
-        <Footer />
       </main>
+      <Footer />
     </div>
   );
 }
