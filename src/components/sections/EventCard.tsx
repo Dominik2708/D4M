@@ -8,7 +8,7 @@ interface EventCardProps {
   iconColor: string;
 }
 
-export function EventCard({ title, date, location, bgColor, iconColor }: EventCardProps) {
+export default function EventCard({ title, date, location, bgColor, iconColor }: EventCardProps) {
   return (
     <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
       <div className="flex items-start gap-4">

@@ -3,7 +3,7 @@ interface TeamMemberProps {
   role: string;
 }
 
-export function TeamMember({ name, role }: TeamMemberProps) {
+export default function TeamMember({ name, role }: TeamMemberProps) {
   return (
     <div className="text-center">
       <div className="w-32 h-32 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full mx-auto mb-4"></div>

@@ -1,6 +1,6 @@
 import { EventCard } from './EventCard';
 
-export function EventsSection() {
+export default function EventsSection() {
   const events = [
     {
       title: 'Schul-Weihnachtsmarkt',

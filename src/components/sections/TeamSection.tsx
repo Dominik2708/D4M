@@ -1,6 +1,6 @@
 import { TeamMember } from './TeamMember';
 
-export function TeamSection() {
+export default function TeamSection() {
   const teamMembers = [
     { name: 'Anna Schmidt', role: 'Geschäftsführung' },
     { name: 'Max Müller', role: 'Marketing' },
