@@ -14,12 +14,12 @@ import {
 } from '@/components/ui/navigation-menu';
 
 const navigationItems = [
-  { href: '#produkte', label: 'Unsere Produkte' },
-  { href: '#quiz', label: 'Quiz' },
-  { href: '#about', label: 'Über uns' },
-  { href: '#termine', label: 'Termine' },
-  { href: '#archive', label: 'Archiv' },
-  { href: '#contact', label: 'Kontakt' },
+  { href: '/#produkte', label: 'Unsere Produkte' },
+  { href: '/#quiz', label: 'Quiz' },
+  { href: '/#about', label: 'Über uns' },
+  { href: '/#termine', label: 'Termine' },
+  { href: '/#archive', label: 'Archiv' },
+  { href: '/#contact', label: 'Kontakt' },
 ];
 
 export function Header() {
