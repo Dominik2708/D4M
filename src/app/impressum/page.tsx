@@ -1,5 +1,4 @@
-import { Footer } from '@/components/Footer';
-import { Header } from '@/components/Header';
+import { Header, Footer } from '@/components';
 
 export const metadata = { title: 'Impressum — D4M' };
 
