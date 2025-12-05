@@ -7,7 +7,7 @@ export default function ImpressumPage() {
   return (
     <div>
       <Header />
-      <main className="min-h-screen bg-white py-12">
+      <main className="min-h-screen bg-white pt-24 pb-12">
         <div className="max-w-4xl mx-auto px-4">
           <article className="prose lg:prose-lg mx-auto bg-white/95 p-8 rounded-xl shadow-sm border border-gray-100">
             <h1>Impressum</h1>
