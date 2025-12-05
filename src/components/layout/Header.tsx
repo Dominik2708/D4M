@@ -35,7 +35,7 @@ export function Header() {
               <Image src="/images/logo.png" alt="Logo" width={48} height={48} />
             </div>
             <div>
-              <h1 className="text-xl text-primary font-bold">Schülerunternehmen</h1>
+              <h1 className="text-xl font-bold">Schülerunternehmen</h1>
               <p className="text-sm text-muted-foreground">BBS I Lüneburg · HA25B</p>
             </div>
           </Link>
@@ -47,7 +47,7 @@ export function Header() {
                 <NavigationMenuItem key={item.href}>
                   <NavigationMenuLink
                     href={item.href}
-                    className="text-foreground hover:text-primary transition-colors cursor-pointer px-4 py-2 rounded-md hover:bg-accent"
+                    className="text-foreground transition-colors cursor-pointer px-4 py-2 rounded-md hover:bg-accent"
                   >
                     {item.label}
                   </NavigationMenuLink>
@@ -70,7 +70,7 @@ export function Header() {
                   <Link
                     key={item.href}
                     href={item.href}
-                    className="text-lg font-medium text-foreground hover:text-primary transition-colors px-4 py-2 rounded-md hover:bg-accent"
+                    className="text-lg font-medium text-foreground transition-colors px-4 py-2 rounded-md hover:bg-accent"
                     onClick={() => setIsOpen(false)}
                   >
                     {item.label}
