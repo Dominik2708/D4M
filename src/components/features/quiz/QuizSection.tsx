@@ -84,7 +84,7 @@ export function QuizSection() {
           <Card className="text-center">
             <CardHeader>
               <CardTitle className="text-3xl mb-4">Quiz abgeschlossen!</CardTitle>
-              <Badge variant="secondary" className="text-lg px-4 py-2">
+              <Badge variant="secondary" className="text-lg px-4 py-2 m-auto">
                 Score: {score}/{questions.length}
               </Badge>
             </CardHeader>
