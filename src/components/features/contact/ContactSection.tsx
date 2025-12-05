@@ -35,7 +35,7 @@ export function ContactSection() {
             {/* Location Map */}
             <div className="space-y-4">
               <h4 className="text-xl font-semibold text-gray-900">Lageplan & Anfahrt</h4>
-              <div className="h-80">
+              <div className="h-96">
                 <DynamicLocationMap className="h-full" />
               </div>
 
