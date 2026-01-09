@@ -29,7 +29,7 @@ export function EventCard({ title, date, time, location, type, description }: Ev
       <CardContent className="space-y-3">
         <div className="flex items-center gap-3 text-sm text-gray-600">
           <div className="bg-blue-100 rounded-lg p-2">
-            <Calendar className="w-4 h-4 text-blue-600" />
+            <Calendar className="w-4 h-4 text-blue-600" aria-hidden="true" />
           </div>
           <span>{date}</span>
         </div>
@@ -37,7 +37,7 @@ export function EventCard({ title, date, time, location, type, description }: Ev
         {time && (
           <div className="flex items-center gap-3 text-sm text-gray-600">
             <div className="bg-green-100 rounded-lg p-2">
-              <Clock className="w-4 h-4 text-green-600" />
+              <Clock className="w-4 h-4 text-green-600" aria-hidden="true" />
             </div>
             <span>{time}</span>
           </div>
@@ -45,7 +45,7 @@ export function EventCard({ title, date, time, location, type, description }: Ev
 
         <div className="flex items-center gap-3 text-sm text-gray-600">
           <div className="bg-purple-100 rounded-lg p-2">
-            <MapPin className="w-4 h-4 text-purple-600" />
+            <MapPin className="w-4 h-4 text-purple-600" aria-hidden="true" />
           </div>
           <span>{location}</span>
         </div>

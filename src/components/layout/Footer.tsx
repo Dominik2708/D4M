@@ -51,7 +51,7 @@ export function Footer() {
           {/* Quick Links */}
           <div>
             <h4 className="font-semibold text-lg mb-4">Navigation</h4>
-            <nav className="flex flex-col space-y-2">
+            <nav className="flex flex-col space-y-2" aria-label="Fußzeilen-Navigation">
               {navigationLinks.map(link => (
                 <Button
                   key={link.href}
@@ -73,7 +73,10 @@ export function Footer() {
                 const Icon = info.icon;
                 return (
                   <div key={index} className="flex items-start gap-3">
-                    <Icon className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
+                    <Icon
+                      className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0"
+                      aria-hidden="true"
+                    />
                     <div className="text-sm text-muted-foreground">
                       {Array.isArray(info.content) ? (
                         info.content.map((line, i) => <p key={i}>{line}</p>)

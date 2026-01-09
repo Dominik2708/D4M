@@ -1,4 +1,5 @@
 import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 import { ArrowRight, Play } from 'lucide-react';
 
 export function HeroSection() {
@@ -33,13 +34,17 @@ export function HeroSection() {
           </p>
 
           <div className="flex gap-4 justify-center flex-wrap">
-            <Button size="lg" className="gap-2 text-lg px-8 py-3">
-              Unsere Produkte
-              <ArrowRight className="w-5 h-5" />
+            <Button size="lg" className="gap-2 text-lg px-8 py-3" asChild>
+              <Link href="#produkte" aria-label="Zu unseren Produkten">
+                Unsere Produkte
+                <ArrowRight className="w-5 h-5" aria-hidden="true" />
+              </Link>
             </Button>
-            <Button size="lg" variant="outline" className="gap-2 text-lg px-8 py-3">
-              <Play className="w-5 h-5" />
-              Quiz starten
+            <Button size="lg" variant="outline" className="gap-2 text-lg px-8 py-3" asChild>
+              <Link href="#quiz" aria-label="Quiz starten">
+                <Play className="w-5 h-5" aria-hidden="true" />
+                Quiz starten
+              </Link>
             </Button>
           </div>
         </div>
