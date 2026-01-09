@@ -33,13 +33,17 @@ export function HeroSection() {
           </p>
 
           <div className="flex gap-4 justify-center flex-wrap">
-            <Button size="lg" className="gap-2 text-lg px-8 py-3">
-              Unsere Produkte
-              <ArrowRight className="w-5 h-5" />
+            <Button asChild size="lg" className="gap-2 text-lg px-8 py-3">
+              <a href="#produkte">
+                Unsere Produkte
+                <ArrowRight className="w-5 h-5" />
+              </a>
             </Button>
-            <Button size="lg" variant="outline" className="gap-2 text-lg px-8 py-3">
-              <Play className="w-5 h-5" />
-              Quiz starten
+            <Button asChild size="lg" variant="outline" className="gap-2 text-lg px-8 py-3">
+              <a href="#quiz" aria-label="Quiz starten">
+                <Play className="w-5 h-5" />
+                Quiz starten
+              </a>
             </Button>
           </div>
         </div>

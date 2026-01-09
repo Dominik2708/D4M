@@ -59,24 +59,17 @@ export function ProductsSection() {
         <div className="space-y-16">
           {productCategories.map((category, categoryIndex) => (
             <div key={categoryIndex} className="max-w-7xl mx-auto">
-              {/* Category Header */}
               <div className="text-center mb-12">
                 <div
                   className={`inline-block bg-gradient-to-r ${category.gradientFrom} ${category.gradientTo} text-white px-6 py-2 rounded-full mb-4`}
                 >
                   <h3 className="text-2xl font-bold">{category.title}</h3>
                 </div>
-                <Badge variant="secondary" className="mb-4 block w-fit mx-auto">
-                  {category.category}
-                </Badge>
                 <p className="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
                   {category.description}
                 </p>
               </div>
-
-              {/* Product Grid */}
               <div className="grid lg:grid-cols-2 gap-12 items-center">
-                {/* Product Images */}
                 <div className="grid grid-cols-2 gap-4">
                   {category.images.map((image, imageIndex) => (
                     <Card
@@ -95,7 +88,6 @@ export function ProductsSection() {
                   ))}
                 </div>
 
-                {/* Product Features */}
                 <div className="space-y-6">
                   <Card>
                     <CardHeader>

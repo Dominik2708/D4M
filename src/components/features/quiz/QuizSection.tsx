@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -13,34 +13,94 @@ interface QuizQuestion {
 
 const questions: QuizQuestion[] = [
   {
-    question: 'Wie lange dauert es, bis eine Plastikflasche im Meer vollständig zersetzt ist?',
-    options: ['10-20 Jahre', '50-100 Jahre', '200-450 Jahre', '1000+ Jahre'],
-    correct: 2,
-  },
-  {
-    question: 'Welcher Anteil des weltweiten Plastiks wird recycelt?',
-    options: ['Weniger als 10%', 'Etwa 25%', 'Etwa 50%', 'Über 75%'],
+    question: 'Wie lange dauert es, bis sich Plastikmüll im Meer abgebaut hat?',
+    options: ['500 Jahre', '1 Jahr', '10 Jahre', '200 Jahre'],
     correct: 0,
   },
   {
-    question: 'Was ist Mikroplastik?',
-    options: [
-      'Plastikteile kleiner als 5mm',
-      'Biologisch abbaubares Plastik',
-      'Recyceltes Plastik',
-      'Plastik aus nachwachsenden Rohstoffen',
-    ],
+    question: 'Wie viele Tiere sterben jährlich am Plastikmüll im Meer?',
+    options: ['1,5 Millionen', '10.000', '100.000', '100 Millionen'],
     correct: 0,
   },
   {
-    question: 'Welche Alternative bietet 3D-Druck für nachhaltige Produktion?',
-    options: [
-      'Nur Massenproduktion möglich',
-      'Bedarfsgerechte Produktion und Materialeffizienz',
-      'Höherer Materialverbrauch',
-      'Ausschließlich Einwegprodukte',
-    ],
-    correct: 1,
+    question: 'Welches ist das größte Korallenriff auf der Erde?',
+    options: ['Great Barrier Reef', 'Ningaloo Reef', 'Amazonas Reef', 'Großes Asienriff'],
+    correct: 0,
+  },
+  {
+    question: 'Wie lange ist das größte Korallenriff?',
+    options: ['2.300 km', '800 km', '5.250 km', '2,3 km'],
+    correct: 0,
+  },
+  {
+    question: 'Wie tief ist der Marianengraben an seiner tiefsten Stelle?',
+    options: ['11 km (≈ 11.000 m)', '25 km', '3,8 km', '1,5 km'],
+    correct: 0,
+  },
+  {
+    question: 'Wie tief kann das Licht ins Meer eindringen (noch sichtbar für Menschen)?',
+    options: ['300 m', '150 m', '75 m', '37 m'],
+    correct: 0,
+  },
+  {
+    question: 'Wie viel Prozent der Ozeane sind bereits erforscht?',
+    options: ['5–10 %', '2–4 %', '15–20 %', '50–60 %'],
+    correct: 0,
+  },
+  {
+    question: 'Wie lang ist die längste Bergkette im Meer?',
+    options: ['65.000 km', '65 km', '650 km', '6.500 km'],
+    correct: 0,
+  },
+  {
+    question: 'Welcher Ozean ist der größte der Erde?',
+    options: ['Pazifischer Ozean', 'Indischer Ozean', 'Atlantischer Ozean', 'Arktischer Ozean'],
+    correct: 0,
+  },
+  {
+    question: 'Wie viel Prozent der Erdoberfläche sind mit Wasser bedeckt?',
+    options: ['71 %', '51 %', '61 %', '81 %'],
+    correct: 0,
+  },
+  {
+    question: 'Welches Meer hat den höchsten Salzgehalt?',
+    options: ['Totes Meer', 'Mittelmeer', 'Schwarzes Meer', 'Nordsee'],
+    correct: 0,
+  },
+  {
+    question: 'Wie heißen die weltweiten warmen Meeresströmungen, die das Klima beeinflussen?',
+    options: ['Thermohaline Zirkulation', 'Passatwinde', 'La Niña', 'Taifun-Zirkulation'],
+    correct: 0,
+  },
+  {
+    question: 'Welche Farbe des Lichts dringt am tiefsten ins Meer?',
+    options: ['Blau', 'Rot', 'Gelb', 'Grün'],
+    correct: 0,
+  },
+  {
+    question: 'Welches Meer ist das größte Binnenmeer der Welt?',
+    options: ['Kaspisches Meer', 'Mittelmeer', 'Schwarzes Meer', 'Rotes Meer'],
+    correct: 0,
+  },
+  {
+    question: 'Wie nennt man das Phänomen, wenn Wasserpflanzen massenhaft wachsen und das Wasser grün färben?',
+    options: ['Algenblüte', 'Meeresleuchten', 'Gezeitenströmung', 'Planktonwachstum'],
+    correct: 0,
+  },
+  {
+    question: 'Wie nennt man die Zone, in der das Licht vollständig verschwindet?',
+    options: ['Aphotische Zone', 'Euphotische Zone', 'Thermokline', 'Bathypelagische Zone'],
+    correct: 0,
+  },
+  {
+    question: 'Was ist die Hauptursache für Gezeiten (Ebbe und Flut)?',
+    options: ['Schwerkraft von Mond und Sonne', 'Windströmungen', 'Sonnenenergie', 'Vulkanische Aktivität'],
+    correct: 0,
+  },
+  {
+    question: 'Wie viel Prozent des Meeresmülls besteht aus Plastik?',
+    options: ['80 %', '20 %', '40 %', '60 %'],
+    correct: 0,
   },
 ];
 
@@ -51,17 +111,34 @@ export function QuizSection() {
   const [showResult, setShowResult] = useState(false);
   const [quizCompleted, setQuizCompleted] = useState(false);
 
+  const getDoubleIndices = () => {
+    const count = Math.min(2, questions.length);
+    const indices = Array.from({ length: questions.length }, (_, i) => i);
+    for (let i = indices.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [indices[i], indices[j]] = [indices[j], indices[i]];
+    }
+    return indices.slice(0, count);
+  };
+
+  const [doubleIndices, setDoubleIndices] = useState<number[]>(() => getDoubleIndices());
+
+  const maxScore = questions.length + doubleIndices.length;
+
   const handleAnswerSelect = (answerIndex: number) => {
+    // once an answer is selected, further changes are prevented
+    if (selectedAnswer !== null) return;
     setSelectedAnswer(answerIndex);
   };
 
   const handleNextQuestion = () => {
     if (selectedAnswer === questions[currentQuestion].correct) {
-      setScore(score + 1);
+      const pointsToAdd = doubleIndices.includes(currentQuestion) ? 2 : 1;
+      setScore((s) => s + pointsToAdd);
     }
 
     if (currentQuestion + 1 < questions.length) {
-      setCurrentQuestion(currentQuestion + 1);
+      setCurrentQuestion((c) => c + 1);
       setSelectedAnswer(null);
       setShowResult(false);
     } else {
@@ -75,6 +152,7 @@ export function QuizSection() {
     setSelectedAnswer(null);
     setShowResult(false);
     setQuizCompleted(false);
+    setDoubleIndices(getDoubleIndices());
   };
 
   if (quizCompleted) {
@@ -85,16 +163,16 @@ export function QuizSection() {
             <CardHeader>
               <CardTitle className="text-3xl mb-4">Quiz abgeschlossen!</CardTitle>
               <Badge variant="secondary" className="text-lg px-4 py-2 m-auto">
-                Score: {score}/{questions.length}
+                Score: {score}/{maxScore}
               </Badge>
             </CardHeader>
             <CardContent className="space-y-6">
               <p className="text-xl text-gray-700">
-                {score === questions.length
+                {score === maxScore
                   ? 'Perfekt! Du kennst dich bestens mit Umweltthemen aus!'
-                  : score >= questions.length / 2
-                  ? 'Gut gemacht! Du hast ein solides Wissen über Umweltthemen.'
-                  : 'Nicht schlecht! Es gibt noch einiges zu lernen über Umweltschutz.'}
+                  : score >= maxScore / 2
+                    ? 'Gut gemacht! Du hast ein solides Wissen über Umweltthemen.'
+                    : 'Nicht schlecht! Es gibt noch einiges zu lernen über Umweltschutz.'}
               </p>
               <p className="text-gray-600">
                 Besuche unsere Workshops, um mehr über nachhaltige 3D-Druck-Technologie zu erfahren!
@@ -119,59 +197,89 @@ export function QuizSection() {
           </p>
         </div>
 
-        <Card>
+          <Card
+            className={
+              selectedAnswer !== null
+                ? selectedAnswer === questions[currentQuestion].correct
+                  ? 'ring-2 ring-green-500'
+                  : 'ring-2 ring-red-500'
+                : ''
+            }
+          >
           <CardHeader>
             <div className="flex justify-between items-center">
-              <Badge variant="outline">
-                Frage {currentQuestion + 1} von {questions.length}
-              </Badge>
+              <div className="flex items-center gap-2">
+                <Badge variant="outline">
+                  Frage {currentQuestion + 1} von {questions.length}
+                </Badge >
+                {doubleIndices.includes(currentQuestion) && (
+                  <Badge variant="secondary" className="bg-accent/40">x2 Für diese Antwort gibt es doppelte Punktzahl.</Badge>
+                )}
+              </div>
               <Badge variant="secondary">
-                Score: {score}/{currentQuestion}
+                Score: {score}/{maxScore}
               </Badge>
             </div>
             <CardTitle className="text-2xl mt-4">Plastikverschmutzung im Wasser</CardTitle>
           </CardHeader>
 
-          <CardContent className="space-y-6">
+            <CardContent className="space-y-6">
             <h3 className="text-xl font-semibold text-primary">
               {questions[currentQuestion].question}
             </h3>
 
             <div className="grid gap-3">
-              {questions[currentQuestion].options.map((option, index) => (
-                <Button
-                  key={index}
-                  variant={selectedAnswer === index ? 'default' : 'outline'}
-                  className="text-left justify-start h-auto p-4"
-                  onClick={() => handleAnswerSelect(index)}
-                >
-                  {option}
-                </Button>
-              ))}
+              {questions[currentQuestion].options.map((option, index) => {
+                const isAnswered = selectedAnswer !== null;
+                const correctIndex = questions[currentQuestion].correct;
+                // base classes used for all option buttons
+                let extra = '';
+                if (isAnswered) {
+                  if (index === correctIndex) {
+                    // highlight correct answer
+                    extra = 'bg-green-100 border border-green-500 text-green-800';
+                  } else if (index === selectedAnswer && selectedAnswer !== correctIndex) {
+                    // highlight wrong selected answer
+                    extra = 'bg-red-100 border border-red-500 text-red-800';
+                  } else {
+                    extra = 'opacity-70';
+                  }
+                }
+
+                return (
+                  <Button
+                    key={index}
+                    variant={isAnswered ? 'outline' : selectedAnswer === index ? 'default' : 'outline'}
+                    className={`text-left justify-start h-auto p-4 ${extra}`}
+                    onClick={() => handleAnswerSelect(index)}
+                    disabled={isAnswered}
+                  >
+                    <div className="flex w-full items-center justify-between">
+                      <span>{option}</span>
+                      {isAnswered && (
+                        index === correctIndex ? (
+                          <span className="ml-4 text-green-600 text-lg" aria-hidden>
+                            ✓
+                          </span>
+                        ) : index === selectedAnswer ? (
+                          <span className="ml-4 text-red-600 text-lg" aria-hidden>
+                            ✗
+                          </span>
+                        ) : null
+                      )}
+                    </div>
+                  </Button>
+                );
+              })}
             </div>
 
-            {selectedAnswer !== null && (
-              <div className="mt-6 p-4 rounded-lg bg-accent/40">
-                {selectedAnswer === questions[currentQuestion].correct ? (
-                  <p className="text-primary font-medium">
-                    ✓ Richtig! Das ist die korrekte Antwort.
-                  </p>
-                ) : (
-                  <p className="text-destructive font-medium">
-                    ✗ Leider falsch. Die richtige Antwort ist:{' '}
-                    {questions[currentQuestion].options[questions[currentQuestion].correct]}
-                  </p>
-                )}
-              </div>
-            )}
-
-            {selectedAnswer !== null && (
-              <div className="text-center">
+            <div className="text-center">
+              {selectedAnswer !== null && (
                 <Button onClick={handleNextQuestion} size="lg">
                   {currentQuestion + 1 < questions.length ? 'Nächste Frage' : 'Quiz beenden'}
                 </Button>
-              </div>
-            )}
+              )}
+            </div>
           </CardContent>
         </Card>
       </div>
