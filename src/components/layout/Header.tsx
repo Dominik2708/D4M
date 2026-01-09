@@ -41,7 +41,7 @@ export function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <NavigationMenu className="hidden lg:flex">
+          <NavigationMenu className="hidden lg:flex" aria-label="Hauptnavigation">
             <NavigationMenuList>
               {navigationItems.map(item => (
                 <NavigationMenuItem key={item.href}>
@@ -59,13 +59,13 @@ export function Header() {
           {/* Mobile Navigation */}
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild className="lg:hidden">
-              <Button variant="ghost" size="icon" aria-label="Open menu">
+              <Button variant="ghost" size="icon" aria-label="Menü öffnen">
                 <Menu className="h-6 w-6" />
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-              <SheetTitle className="hidden">Menu</SheetTitle>
-              <nav className="flex flex-col space-y-4 mt-8">
+              <SheetTitle className="sr-only">Menü</SheetTitle>
+              <nav className="flex flex-col space-y-4 mt-8" aria-label="Mobile Navigation">
                 {navigationItems.map(item => (
                   <Link
                     key={item.href}
