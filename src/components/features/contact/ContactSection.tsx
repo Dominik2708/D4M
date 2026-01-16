@@ -54,27 +54,6 @@ export function ContactSection() {
                 </div>
               </div>
             </div>
-
-            {/* Additional Info Cards */}
-            <div className="grid gap-4">
-              <div className="bg-blue-50 border-l-4 border-blue-400 p-6 rounded-lg">
-                <h4 className="font-semibold text-gray-900 mb-2">Für Schüler der BBS I</h4>
-                <p className="text-gray-700 text-sm leading-relaxed">
-                  Du gehst auf die BBS I und hast Interesse an unserem Schülerunternehmen? Komm
-                  einfach zu unseren regulären Terminen vorbei oder sprich Teammitglieder der Klasse
-                  HA25B direkt an.
-                </p>
-              </div>
-
-              <div className="bg-green-50 border-l-4 border-green-400 p-6 rounded-lg">
-                <h4 className="font-semibold text-gray-900 mb-2">Kooperationspartner</h4>
-                <p className="text-gray-700 text-sm leading-relaxed">
-                  Interesse an einer Kooperation? Wir freuen uns über Partnerschaften mit anderen
-                  Schulen, Unternehmen oder Bildungseinrichtungen im Bereich Technik und
-                  Nachhaltigkeit.
-                </p>
-              </div>
-            </div>
           </div>
         </div>
       </div>
