@@ -20,7 +20,7 @@ const contactItems: ContactItem[] = [
   {
     icon: Phone,
     title: 'Telefon',
-    content: '0123 / 456789',
+    content: '04131 99220600',
     bgColor: 'bg-green-100',
     iconColor: 'text-green-600',
   },
@@ -31,9 +31,9 @@ const contactItems: ContactItem[] = [
       <>
         BBS I - Berufsbildende Schulen
         <br />
-        Musterstraße 123
+        Spillbrunnenweg 1
         <br />
-        12345 Musterstadt
+        21337 Lüneburg
       </>
     ),
     bgColor: 'bg-purple-100',
