@@ -6,7 +6,7 @@ export default function DatenschutzPage() {
   return (
     <div>
       <Header />
-  <main className="min-h-screen bg-white pt-24 pb-12">
+      <main className="min-h-screen bg-white pt-24 pb-12">
         <div className="max-w-5xl mx-auto px-4">
           <article className="prose lg:prose-lg mx-auto bg-white/95 p-8 rounded-xl shadow-sm border border-gray-100 [&_h1]:font-extrabold [&_h2]:font-semibold [&_h3]:font-semibold [&_h4]:font-semibold [&_p]:mb-6">
             <h1>Datenschutzerklärung</h1>
