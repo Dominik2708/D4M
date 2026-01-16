@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const productCategories = [
   {
@@ -106,13 +107,21 @@ export function ProductsSection() {
                   </Card>
 
                   {categoryIndex === 0 && (
-                    <div className="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-lg">
-                      <h4 className="font-semibold text-gray-900 mb-2">Hinweis:</h4>
-                      <p className="text-gray-700 text-sm">
-                        Alle Produkte werden zu Bildungszwecken erstellt. Keine kommerziellen
-                        Preisangaben verfügbar.
-                      </p>
-                    </div>
+                    <>
+                      <div className="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-lg">
+                        <h4 className="font-semibold text-gray-900 mb-2">Hinweis:</h4>
+                        <p className="text-gray-700 text-sm">
+                          Alle Produkte werden zu Bildungszwecken erstellt. Keine kommerziellen
+                          Preisangaben verfügbar.
+                        </p>
+                      </div>
+                      <div className="bg-green-50 border-l-4 border-green-400 p-4 rounded-lg">
+                        <h4 className="font-semibold text-gray-900 mb-2">Individuelle Anfertigungen:</h4>
+                        <p className="text-gray-700 text-sm">
+                          Sie haben eine spezielle Idee? Schicken Sie uns Ihre Anfrage <Link href="/#contact" className="font-semibold text-blue-600 underline">hier</Link>.
+                        </p>
+                      </div>
+                    </>
                   )}
 
                   {categoryIndex === 1 && (
