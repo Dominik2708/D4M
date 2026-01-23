@@ -1,0 +1,58 @@
+{
+  "productsSection": {
+    "title": "Our Product Areas",
+    "subtitle": "Innovative solutions through modern technology and traditional craftsmanship",
+    "categories": [
+      {
+        "key": "3d",
+        "title": "3D Printing Technology",
+        "description": "Innovative 3D-printed solutions for everyday use",
+        "category": "3D Products",
+        "gradientFrom": "from-blue-400",
+        "gradientTo": "to-blue-600",
+        "features": [
+          "Prototyping and product development",
+          "Customized components",
+          "Sustainable materials (PLA, PETG)",
+          "Rapid prototyping service",
+          "Design consulting and optimization"
+        ],
+        "images": [
+          "/images/plastic/keychain_1.jpeg",
+          "/images/plastic/keychain_2.jpeg",
+          "/images/plastic/keychain_3.jpeg",
+          "/images/plastic/keychain_4.jpeg"
+        ]
+      },
+      {
+        "key": "wood",
+        "title": "Woodworking Workshop",
+        "description": "Traditional woodworking in cooperation with BBS II",
+        "category": "Wood Products",
+        "gradientFrom": "from-amber-400",
+        "gradientTo": "to-orange-600",
+        "features": [
+          "Furniture construction and interior design",
+          "Decorative wooden objects",
+          "Restoration and repairs",
+          "Sustainable forestry",
+          "Handcrafted custom pieces"
+        ],
+        "images": [
+          "/images/wood/birdhouse_1.jpeg",
+          "/images/wood/jewlerycase_1.jpeg",
+          "/images/wood/keyholder_1.jpeg",
+          "/images/wood/pictureframe_1.jpeg"
+        ]
+      }
+    ],
+    "servicesTitle": "Our Services",
+    "noteTitle": "Note:",
+    "noteText": "All products are created for educational purposes. No commercial pricing available.",
+    "customTitle": "Custom Creations:",
+    "customText": "Have a special idea? Send us your request here.",
+    "coopTitle": "Cooperation:",
+    "coopText": "Joint project with BBS II - Connecting traditional craftsmanship and modern technology.",
+    "productAlt": "Product"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "productsSection": {
+    "title": "Unsere Produktbereiche",
+    "subtitle": "Innovative Lösungen durch moderne Technologie und traditionelles Handwerk",
+    "categories": [
+      {
+        "key": "3d",
+        "title": "3D-Drucktechnologie",
+        "description": "Innovative 3D-gedruckte Lösungen für den Alltag",
+        "category": "3D-Produkte",
+        "gradientFrom": "from-blue-400",
+        "gradientTo": "to-blue-600",
+        "features": [
+          "Prototyping und Produktentwicklung",
+          "Maßgeschneiderte Bauteile",
+          "Nachhaltige Materialien (PLA, PETG)",
+          "Rapid Prototyping Service",
+          "Designberatung und Optimierung"
+        ],
+        "images": [
+          "/images/plastic/keychain_1.jpeg",
+          "/images/plastic/keychain_2.jpeg",
+          "/images/plastic/keychain_3.jpeg",
+          "/images/plastic/keychain_4.jpeg"
+        ]
+      },
+      {
+        "key": "wood",
+        "title": "Holzverarbeitung Werkstatt",
+        "description": "Traditionelle Holzverarbeitung in Kooperation mit der BBS II",
+        "category": "Holzprodukte",
+        "gradientFrom": "from-amber-400",
+        "gradientTo": "to-orange-600",
+        "features": [
+          "Möbelbau und Innenausstattung",
+          "Dekorative Holzgegenstände",
+          "Restaurierung und Reparaturen",
+          "Nachhaltige Forstwirtschaft",
+          "Handwerkliche Sonderanfertigungen"
+        ],
+        "images": [
+          "/images/wood/birdhouse_1.jpeg",
+          "/images/wood/jewlerycase_1.jpeg",
+          "/images/wood/keyholder_1.jpeg",
+          "/images/wood/pictureframe_1.jpeg"
+        ]
+      }
+    ],
+    "servicesTitle": "Unsere Leistungen",
+    "noteTitle": "Hinweis:",
+    "noteText": "Alle Produkte werden zu Bildungszwecken erstellt. Keine kommerziellen Preisangaben verfügbar.",
+    "customTitle": "Individuelle Anfertigungen:",
+    "customText": "Sie haben eine spezielle Idee? Schicken Sie uns Ihre Anfrage hier.",
+    "coopTitle": "Kooperation:",
+    "coopText": "Gemeinsames Projekt mit der BBS II - Verbindung von traditionellem Handwerk und moderner Technik.",
+    "productAlt": "Produkt"
+  }
+}
