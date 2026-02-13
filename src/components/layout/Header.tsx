@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
 import { Menu } from 'lucide-react';
+import { ContrastToggle } from '@/components/ui/contrast-toggle';
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -28,7 +29,7 @@ export function Header() {
   return (
     <header className="sticky top-0 w-full bg-background/95 backdrop-blur-sm z-50 border-b border-border">
       <div className="container mx-auto px-4 py-4">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between gap-4">
           {/* Logo Section */}
           <Link href="/" className="flex items-center space-x-4">
             <div className="w-12 h-12 border-2 rounded-lg flex items-center justify-center">
@@ -55,6 +56,11 @@ export function Header() {
               ))}
             </NavigationMenuList>
           </NavigationMenu>
+
+          {/* Accessibility Controls */}
+          <div className="flex items-center gap-2">
+            <ContrastToggle />
+          </div>
 
           {/* Mobile Navigation */}
           <Sheet open={isOpen} onOpenChange={setIsOpen}>

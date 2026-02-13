@@ -21,11 +21,11 @@ const aboutPoints = [
 
 export function AboutSection() {
   return (
-    <section id="about" className="py-20 px-4 bg-white">
+    <section id="about" className="py-20 px-4 bg-gradient-to-br from-purple-50 via-white to-blue-50">
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Wir über uns</h2>
-          <p className="text-gray-600 text-lg">
+          <p className="text-gray-600 text-lg font-normal">
             Ein kreatives und innovatives Startup-Projekt der Klasse HA25B
           </p>
         </div>
@@ -33,18 +33,18 @@ export function AboutSection() {
         <div className="grid lg:grid-cols-2 gap-16 items-start mb-16">
           {/* Left Content */}
           <div className="space-y-6">
-            <Card className="bg-gradient-to-br from-blue-50 to-purple-50 border-0">
+            <Card className="bg-gradient-to-br from-blue-50 to-purple-50">
               <CardContent className="p-8 text-center">
                 <Users className="w-20 h-20 text-blue-600 mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-gray-900 mb-2">BBS I Lüneburg · HA25B</h3>
-                <p className="text-gray-600">Unsere Schülerfirma</p>
+                <p className="text-gray-600 font-normal">Unsere Schülerfirma</p>
               </CardContent>
             </Card>
           </div>
 
           {/* Right Content */}
           <div className="space-y-6">
-            <div className="space-y-4 text-gray-700 leading-relaxed">
+            <div className="space-y-4 text-gray-700 leading-relaxed font-normal">
               <p>
                 Unsere Schülerfirma ist ein kreatives und innovatives Startup-Projekt der
                 Schüler/-innen der HA25B der einjährigen Berufsfachschule Wirtschaft mit den
@@ -67,27 +67,27 @@ export function AboutSection() {
           {aboutPoints.map((point, index) => (
             <Card key={index} className="text-center hover:shadow-lg transition-shadow">
               <CardContent className="p-6">
-                <div className="bg-blue-100 rounded-lg p-3 w-fit mx-auto mb-4">
+                <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-lg p-3 w-fit mx-auto mb-4">
                   <point.icon className="w-6 h-6 text-blue-600" />
                 </div>
-                <h4 className="font-semibold text-gray-900 mb-2">{point.title}</h4>
-                <p className="text-sm text-gray-600 leading-relaxed">{point.description}</p>
+                <h4 className="font-bold text-gray-900 mb-2">{point.title}</h4>
+                <p className="text-sm text-gray-600 leading-relaxed font-normal">{point.description}</p>
               </CardContent>
             </Card>
           ))}
         </div>
 
         {/* Mission Statement */}
-        <div className="bg-blue-50 rounded-2xl p-8 lg:p-12 text-center">
+        <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-8 lg:p-12 text-center">
           <h3 className="text-2xl font-bold text-gray-900 mb-6">Unser Ansatz und Ziel</h3>
-          <div className="max-w-4xl mx-auto space-y-4 text-gray-700 leading-relaxed">
+          <div className="max-w-4xl mx-auto space-y-4 text-gray-700 leading-relaxed font-normal">
             <p>
               Als Schülerunternehmen setzen wir auf Teamarbeit, Kreativität und gegenseitige
               Unterstützung. Jede Idee zählt, jeder Beitrag ist wertvoll. Wir sind ein offenes Team,
               das sich stetig weiterentwickelt und innovative Lösungen für spannende Projekte
               schafft.
             </p>
-            <p className="font-semibold">
+            <p className="font-bold">
               <strong>Unser Ziel:</strong> Mit unseren Produkten einen echten Mehrwert für die
               Gemeinschaft zu bieten – und dabei Erfahrung für unsere berufliche Zukunft zu sammeln.
             </p>

@@ -14,14 +14,14 @@ const contactItems: ContactItem[] = [
     icon: Mail,
     title: 'E-Mail',
     content: 'schuelerunternehmen@bbs1.de',
-    bgColor: 'bg-blue-100',
+    bgColor: 'bg-blue-50',
     iconColor: 'text-blue-600',
   },
   {
     icon: Phone,
     title: 'Telefon',
     content: '04131 99220600',
-    bgColor: 'bg-green-100',
+    bgColor: 'bg-green-50',
     iconColor: 'text-green-600',
   },
   {
@@ -36,7 +36,7 @@ const contactItems: ContactItem[] = [
         21337 Lüneburg
       </>
     ),
-    bgColor: 'bg-purple-100',
+    bgColor: 'bg-purple-50',
     iconColor: 'text-purple-600',
   },
 ];
@@ -52,8 +52,8 @@ export function ContactInfo() {
                 <item.icon className={`w-6 h-6 ${item.iconColor}`} />
               </div>
               <div className="min-w-0 flex-1">
-                <h3 className="font-semibold text-gray-900 mb-1">{item.title}</h3>
-                <div className="text-gray-600 text-sm leading-relaxed">{item.content}</div>
+                <h3 className="font-bold text-gray-900 mb-1">{item.title}</h3>
+                <div className="text-gray-700 text-sm leading-relaxed font-normal">{item.content}</div>
               </div>
             </div>
           </CardContent>

@@ -157,24 +157,24 @@ export function QuizSection() {
 
   if (quizCompleted) {
     return (
-      <section id="quiz" className="py-20 px-4 bg-accent/20">
+      <section id="quiz" className="py-20 px-4 bg-gray-50">
         <div className="container mx-auto max-w-4xl">
           <Card className="text-center">
             <CardHeader>
-              <CardTitle className="text-3xl mb-4">Quiz abgeschlossen!</CardTitle>
-              <Badge variant="secondary" className="text-lg px-4 py-2 m-auto">
+              <CardTitle className="text-3xl mb-4 text-gray-900 font-bold">Quiz abgeschlossen!</CardTitle>
+              <Badge variant="secondary" className="text-lg px-4 py-2 m-auto bg-green-50 text-green-700">
                 Score: {score}/{maxScore}
               </Badge>
             </CardHeader>
             <CardContent className="space-y-6">
-              <p className="text-xl text-gray-700">
+              <p className="text-xl text-gray-700 font-normal">
                 {score === maxScore
                   ? 'Perfekt! Du kennst dich bestens mit Umweltthemen aus!'
                   : score >= maxScore / 2
                     ? 'Gut gemacht! Du hast ein solides Wissen über Umweltthemen.'
                     : 'Nicht schlecht! Es gibt noch einiges zu lernen über Umweltschutz.'}
               </p>
-              <p className="text-gray-600">
+              <p className="text-gray-600 font-normal">
                 Besuche unsere Workshops, um mehr über nachhaltige 3D-Druck-Technologie zu erfahren!
               </p>
               <Button onClick={resetQuiz} size="lg">
@@ -188,11 +188,11 @@ export function QuizSection() {
   }
 
   return (
-    <section id="quiz" className="py-20 px-4 bg-blue-50">
+    <section id="quiz" className="py-20 px-4 bg-gray-50">
       <div className="container mx-auto max-w-4xl">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-primary mb-4">Wasser-Plastik-Quiz</h2>
-          <p className="text-muted-foreground text-lg">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">Wasser-Plastik-Quiz</h2>
+          <p className="text-gray-600 text-lg font-normal">
             Teste dein Wissen über Plastikverschmutzung in unseren Gewässern
           </p>
         </div>
@@ -201,30 +201,30 @@ export function QuizSection() {
             className={
               selectedAnswer !== null
                 ? selectedAnswer === questions[currentQuestion].correct
-                  ? 'ring-2 ring-green-500'
-                  : 'ring-2 ring-red-500'
+                  ? 'ring-2 ring-green-400'
+                  : 'ring-2 ring-red-400'
                 : ''
             }
           >
           <CardHeader>
             <div className="flex justify-between items-center">
               <div className="flex items-center gap-2">
-                <Badge variant="outline">
+                <Badge variant="outline" className="text-gray-700 border-gray-300">
                   Frage {currentQuestion + 1} von {questions.length}
                 </Badge >
                 {doubleIndices.includes(currentQuestion) && (
-                  <Badge variant="secondary" className="bg-accent/40">x2 Für diese Antwort gibt es doppelte Punktzahl.</Badge>
+                  <Badge variant="secondary" className="bg-yellow-50 text-yellow-700">x2 Für diese Antwort gibt es doppelte Punktzahl.</Badge>
                 )}
               </div>
-              <Badge variant="secondary">
+              <Badge variant="secondary" className="bg-blue-50 text-blue-700">
                 Score: {score}/{maxScore}
               </Badge>
             </div>
-            <CardTitle className="text-2xl mt-4">Plastikverschmutzung im Wasser</CardTitle>
+            <CardTitle className="text-2xl mt-4 text-gray-900 font-bold">Plastikverschmutzung im Wasser</CardTitle>
           </CardHeader>
 
             <CardContent className="space-y-6">
-            <h3 className="text-xl font-semibold text-primary">
+            <h3 className="text-xl font-bold text-gray-900">
               {questions[currentQuestion].question}
             </h3>
 
@@ -237,10 +237,10 @@ export function QuizSection() {
                 if (isAnswered) {
                   if (index === correctIndex) {
                     // highlight correct answer
-                    extra = 'bg-green-100 border border-green-500 text-green-800';
+                    extra = 'bg-green-50 text-green-900 font-bold';
                   } else if (index === selectedAnswer && selectedAnswer !== correctIndex) {
                     // highlight wrong selected answer
-                    extra = 'bg-red-100 border border-red-500 text-red-800';
+                    extra = 'bg-red-50 text-red-900';
                   } else {
                     extra = 'opacity-70';
                   }

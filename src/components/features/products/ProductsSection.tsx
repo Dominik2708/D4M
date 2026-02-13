@@ -48,11 +48,11 @@ const productCategories = [
 
 export function ProductsSection() {
   return (
-    <section id="produkte" className="py-20 px-4 bg-gray-50">
+    <section id="produkte" aria-label="Unsere Produktbereiche" className="py-20 px-4 bg-gray-50">
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Unsere Produktbereiche</h2>
-          <p className="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
+          <p className="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed font-normal">
             Innovative Lösungen durch moderne Technologie und traditionelles Handwerk
           </p>
         </div>
@@ -66,7 +66,7 @@ export function ProductsSection() {
                 >
                   <h3 className="text-2xl font-bold">{category.title}</h3>
                 </div>
-                <p className="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
+                <p className="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed font-normal">
                   {category.description}
                 </p>
               </div>
@@ -80,7 +80,7 @@ export function ProductsSection() {
                       <div className="aspect-square relative">
                         <Image
                           src={image}
-                          alt={`${category.category} Produkt ${imageIndex + 1}`}
+                          alt={`${category.title} - Beispielprodukt ${imageIndex + 1}`}
                           fill
                           className="object-cover"
                         />
@@ -92,14 +92,14 @@ export function ProductsSection() {
                 <div className="space-y-6">
                   <Card>
                     <CardHeader>
-                      <CardTitle className="text-xl">Unsere Leistungen</CardTitle>
+                      <CardTitle className="text-xl font-bold text-gray-900">Unsere Leistungen</CardTitle>
                     </CardHeader>
                     <CardContent>
                       <ul className="space-y-3">
                         {category.features.map((feature, featureIndex) => (
                           <li key={featureIndex} className="flex items-start gap-3">
-                            <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
-                            <span className="text-gray-700">{feature}</span>
+                            <div className={`w-2 h-2 bg-gradient-to-r ${category.gradientFrom} ${category.gradientTo} rounded-full mt-2 flex-shrink-0`} aria-hidden="true"></div>
+                            <span className="text-gray-700 font-normal">{feature}</span>
                           </li>
                         ))}
                       </ul>
@@ -109,16 +109,16 @@ export function ProductsSection() {
                   {categoryIndex === 0 && (
                     <>
                       <div className="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-lg">
-                        <h4 className="font-semibold text-gray-900 mb-2">Hinweis:</h4>
-                        <p className="text-gray-700 text-sm">
+                        <h4 className="font-bold text-gray-900 mb-2">Hinweis:</h4>
+                        <p className="text-gray-700 text-sm font-normal">
                           Alle Produkte werden zu Bildungszwecken erstellt. Keine kommerziellen
                           Preisangaben verfügbar.
                         </p>
                       </div>
                       <div className="bg-green-50 border-l-4 border-green-400 p-4 rounded-lg">
-                        <h4 className="font-semibold text-gray-900 mb-2">Individuelle Anfertigungen:</h4>
-                        <p className="text-gray-700 text-sm">
-                          Sie haben eine spezielle Idee? Schicken Sie uns Ihre Anfrage <Link href="/#contact" className="font-semibold text-blue-600 underline">hier</Link>.
+                        <h4 className="font-bold text-gray-900 mb-2">Individuelle Anfertigungen:</h4>
+                        <p className="text-gray-700 text-sm font-normal">
+                          Sie haben eine spezielle Idee? Schicken Sie uns Ihre Anfrage <Link href="/#contact" className="font-bold text-blue-600 underline">hier</Link>.
                         </p>
                       </div>
                     </>
@@ -126,8 +126,8 @@ export function ProductsSection() {
 
                   {categoryIndex === 1 && (
                     <div className="bg-amber-50 border-l-4 border-amber-400 p-4 rounded-lg">
-                      <h4 className="font-semibold text-gray-900 mb-2">Kooperation:</h4>
-                      <p className="text-gray-700 text-sm">
+                      <h4 className="font-bold text-gray-900 mb-2">Kooperation:</h4>
+                      <p className="text-gray-700 text-sm font-normal">
                         Gemeinsames Projekt mit der BBS II - Verbindung von traditionellem Handwerk
                         und moderner Technik.
                       </p>

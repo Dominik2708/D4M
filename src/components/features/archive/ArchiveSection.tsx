@@ -81,15 +81,15 @@ const getIcon = (type: ArchiveItem['type']) => {
 const getTypeColor = (type: ArchiveItem['type']) => {
   switch (type) {
     case 'project':
-      return 'bg-blue-100 text-blue-800';
+      return 'bg-blue-50 text-blue-700';
     case 'success':
-      return 'bg-green-100 text-green-800';
+      return 'bg-green-50 text-green-700';
     case 'milestone':
-      return 'bg-purple-100 text-purple-800';
+      return 'bg-purple-50 text-purple-700';
     case 'equipment':
-      return 'bg-orange-100 text-orange-800';
+      return 'bg-orange-50 text-orange-700';
     default:
-      return 'bg-gray-100 text-gray-800';
+      return 'bg-gray-50 text-gray-700';
   }
 };
 
@@ -110,11 +110,11 @@ export function ArchiveSection() {
   }, {} as Record<number, ArchiveItem[]>);
 
   return (
-    <section id="archive" className="py-20 px-4 bg-gray-50">
+    <section id="archive" className="py-20 px-4 bg-gradient-to-br from-gray-50 via-white to-blue-50">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Archiv</h2>
-          <p className="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
+          <p className="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed font-normal">
             Ein Rückblick auf unsere bisherigen Projekte, Erfolge und Entwicklungen
           </p>
         </div>
@@ -128,7 +128,7 @@ export function ArchiveSection() {
             <Badge variant="outline" className="text-green-700 border-green-300">
               Erfolge
             </Badge>
-            <Badge variant="outline" className="text-orange-700 border-orange-300">
+            <Badge variant="outline" className="text-purple-700 border-purple-300">
               Dokumente
             </Badge>
           </div>
@@ -147,23 +147,23 @@ export function ArchiveSection() {
                     <CardHeader className="pb-4">
                       <div className="flex items-start justify-between gap-4">
                         <div className="flex items-center gap-3">
-                          <div className="bg-gray-100 rounded-lg p-2">
-                            <Icon className="w-5 h-5 text-gray-600" />
+                          <div className={`${getTypeColor(item.type)} rounded-lg p-2`}>
+                            <Icon className="w-5 h-5" />
                           </div>
                           <Badge className={getTypeColor(item.type)}>{item.category}</Badge>
                         </div>
-                        <span className="text-sm text-gray-500">{item.date}</span>
+                        <span className="text-sm text-gray-600 font-normal">{item.date}</span>
                       </div>
-                      <CardTitle className="text-lg leading-tight">{item.title}</CardTitle>
+                      <CardTitle className="text-lg leading-tight text-gray-900 font-bold">{item.title}</CardTitle>
                     </CardHeader>
 
                     <CardContent>
-                      <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                      <p className="text-gray-700 text-sm leading-relaxed mb-4 font-normal">
                         {item.description}
                       </p>
                       {item.achievement && (
                         <div className="bg-green-50 border-l-4 border-green-400 p-3 rounded">
-                          <p className="text-green-700 text-sm font-medium">{item.achievement}</p>
+                          <p className="text-gray-900 text-sm font-bold">{item.achievement}</p>
                         </div>
                       )}
                     </CardContent>
@@ -176,7 +176,7 @@ export function ArchiveSection() {
 
         {/* Archive Footer */}
         <div className="text-center mt-16">
-          <p className="text-gray-600">
+          <p className="text-gray-600 font-normal">
             Alle Projekte dokumentieren unseren Lernprozess und die Entwicklung unseres
             Schülerunternehmens seit der Gründung.
           </p>

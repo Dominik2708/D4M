@@ -37,7 +37,7 @@ export function ContactForm() {
   return (
     <Card className="w-full">
       <CardContent className="p-6">
-        <form onSubmit={handleSubmit} className="space-y-6">
+        <form onSubmit={handleSubmit} className="space-y-6" aria-label="Kontaktformular">
           <div className="space-y-2">
             <Label htmlFor="name">Name</Label>
             <Input
@@ -47,7 +47,9 @@ export function ContactForm() {
               placeholder="Ihr Name"
               value={formData.name}
               onChange={handleInputChange}
+              autoComplete="name"
               required
+              aria-required="true"
             />
           </div>
 
@@ -60,7 +62,9 @@ export function ContactForm() {
               placeholder="ihre.email@beispiel.de"
               value={formData.email}
               onChange={handleInputChange}
+              autoComplete="email"
               required
+              aria-required="true"
             />
           </div>
 
@@ -74,6 +78,7 @@ export function ContactForm() {
               onChange={handleInputChange}
               rows={4}
               required
+              aria-required="true"
             />
           </div>
 

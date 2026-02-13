@@ -28,7 +28,7 @@ const contactInfo = [
 
 export function Footer() {
   return (
-    <footer className="bg-background text-foreground py-16">
+    <footer className="bg-background text-foreground py-16" role="contentinfo">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {/* Company Info */}
@@ -68,7 +68,7 @@ export function Footer() {
           {/* Contact Info */}
           <div>
             <h4 className="font-semibold text-lg mb-4">Kontakt</h4>
-            <div className="space-y-3">
+            <address className="space-y-3 not-italic">
               {contactInfo.map((info, index) => {
                 const Icon = info.icon;
                 return (
@@ -87,7 +87,7 @@ export function Footer() {
                   </div>
                 );
               })}
-            </div>
+            </address>
           </div>
         </div>
 
