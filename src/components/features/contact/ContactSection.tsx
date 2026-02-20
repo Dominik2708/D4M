@@ -49,7 +49,7 @@ export function ContactSection() {
                   </div>
                   <div>
                     <p className="font-bold mb-1">🚌 Öffentlich:</p>
-                    <p>Buslinien 5011, 5012 - Haltestelle "BBS I"</p>
+                    <p>Mit Bus & Bahn zum ZOB, zu Fuß der Dahlenburger Landstraße folgen und rechts in die Straße "am Schwalbenberg" abbiegen </p>
                   </div>
                 </div>
               </div>

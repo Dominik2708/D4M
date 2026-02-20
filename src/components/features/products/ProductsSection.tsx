@@ -31,10 +31,9 @@ const productCategories = [
     gradientFrom: 'from-amber-400',
     gradientTo: 'to-orange-600',
     features: [
-      'Möbelbau und Innenausstattung',
       'Dekorative Holzgegenstände',
       'Restaurierung und Reparaturen',
-      'Nachhaltige Forstwirtschaft',
+      'Material aus nachhaltigen Quellen',
       'Handwerkliche Sonderanfertigungen',
     ],
     images: [

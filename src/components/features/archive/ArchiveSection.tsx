@@ -42,7 +42,7 @@ const archiveItems: ArchiveItem[] = [
     date: 'Februar 2022',
     type: 'milestone',
     category: 'Meilenstein',
-    description: 'Offizielle Gründung des Schülerunternehmens an der BBS I Technik',
+    description: 'Offizielle Gründung des Schülerunternehmens an der BBS I',
     achievement: 'Grundstein für alle Folgeaktivitäten',
   },
   {

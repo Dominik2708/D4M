@@ -8,7 +8,7 @@ const events = [
     location: 'Berufsschule Niedersachsen',
     type: 'Wettbewerb',
     description:
-      'Landesweite Messe der Schülerunternehmen aus ganz Niedersachsen mit ca. 20 teilnehmenden Teams. Wettbewerbe: bester Messestand, bester Messebandeitrag, bester Imagefilm und beste Fotopräsentation der Geschäftsidee.',
+      'Landesweite Messe der Schülerunternehmen aus ganz Niedersachsen mit ca. 20 teilnehmenden Teams. Wettbewerbe: bester Messestand, bester Imagefilm und beste Fotopräsentation der Geschäftsidee.',
   },
   {
     title: 'Summer-Sale',
@@ -49,7 +49,7 @@ export function EventsSection() {
               Die Messe bietet den Jugendlichen die Möglichkeit, ihre Geschäftsideen und Produkte
               einer breiten Öffentlichkeit vorzustellen. Ziel der Messe ist es, unternehmerisches
               Denken und Handeln praxisnah zu fördern, wirtschaftliche Kompetenzen zu stärken und
-              den Austausch zwischen Schüler/-innen, Schulen, Wirtschaft und Politik zu
+              den Austausch zwischen Schüler/-innen, Schulen und Wirtschaft zu
               unterstützen.
             </p>
           </div>

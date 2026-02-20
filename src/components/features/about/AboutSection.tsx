@@ -48,14 +48,14 @@ export function AboutSection() {
               <p>
                 Unsere Schülerfirma ist ein kreatives und innovatives Startup-Projekt der
                 Schüler/-innen der HA25B der einjährigen Berufsfachschule Wirtschaft mit den
-                Schwerpunkten Handel und IT an den Berufsbildenden Schulen I Lüneburg. Wir haben uns
+                Schwerpunkten Handel und IT in der BBS I Lüneburg. Wir haben uns
                 auf den Bereich 3D-Druck spezialisiert und setzen unsere Ideen mit viel Motivation
                 und Teamgeist in die Tat um.
               </p>
               <p>
-                In einem Design-Thinking-Prozess haben wir durch Interviews mit potenziellen Kunden
-                herausgefunden, welche Produkte gefragt sind – diese entwickeln und produzieren wir
-                nun. Außerdem arbeiten wir in einer Kooperation mit der gewerblichen BBS II: Dort
+                Durch Interviews mit potenziellen Kunden
+                haben wir herausgefunden, welche Produkte gefragt sind – diese entwickeln und produzieren wir
+                nun. Außerdem arbeiten wir kooperativ mit der gewerblichen BBS II zusammen: Dort
                 gefertigte Holzprodukte vermarkten wir als angehende Handelsprofis.
               </p>
             </div>
