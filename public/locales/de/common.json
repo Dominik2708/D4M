@@ -388,7 +388,11 @@
             "emailPlaceholder": "ihre.email@beispiel.de",
             "message": "Nachricht",
             "messagePlaceholder": "Ihre Nachricht an uns...",
-            "submit": "Nachricht senden"
+            "submit": "Nachricht senden",
+            "sending": "Wird gesendet...",
+            "success": "Ihre Nachricht wurde erfolgreich gesendet! Wir werden uns bald bei Ihnen melden.",
+            "error": "Fehler beim Senden der Nachricht. Bitte versuchen Sie es erneut.",
+            "validationError": "Alle Felder müssen ausgefüllt werden"
         },
         "info": {
             "email": "E-Mail",

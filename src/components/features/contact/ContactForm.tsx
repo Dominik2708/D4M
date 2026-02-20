@@ -37,15 +37,13 @@ export function ContactForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    setFormData({ name: '', email: '', message: '' });
     setIsSubmitting(true);
     setSubmitStatus('idle');
 
     try {
       // validate
       if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
-        throw new Error('Alle Felder müssen ausgefüllt werden');
+        throw new Error(t('contact.form.validationError'));
       }
 
       // EmailJS Configuration
@@ -59,17 +57,11 @@ export function ContactForm() {
         to_name: 'D4M Team',
       };
 
-      console.log('Sending email with params:', templateParams);
-      console.log('Service ID:', serviceId);
-      console.log('Template ID:', templateId);
+      await emailjs.send(serviceId, templateId, templateParams);
 
-      const result = await emailjs.send(serviceId, templateId, templateParams);
-
-      console.log('Email sent successfully:', result);
       setSubmitStatus('success');
       setFormData({ name: '', email: '', message: '' });
-    } catch (error: any) {
-      console.error('Error sending email:', error);
+    } catch (error) {
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -119,19 +111,19 @@ export function ContactForm() {
             />
           </div>
 
-          <Button type="submit" className="w-full">
-            {t('contact.form.submit')}
+          <Button type="submit" className="w-full" disabled={isSubmitting}>
+            {isSubmitting ? t('contact.form.sending') : t('contact.form.submit')}
           </Button>
 
           {submitStatus === 'success' && (
             <div className="p-4 bg-green-50 border border-green-200 rounded-md text-green-800">
-              ✅ Ihre Nachricht wurde erfolgreich gesendet! Wir werden uns bald bei Ihnen melden.
+              ✅ {t('contact.form.success')}
             </div>
           )}
 
           {submitStatus === 'error' && (
             <div className="p-4 bg-red-50 border border-red-200 rounded-md text-red-800">
-              ❌ Fehler beim Senden der Nachricht. Bitte versuchen Sie es erneut.
+              ❌ {t('contact.form.error')}
             </div>
           )}
         </form>
