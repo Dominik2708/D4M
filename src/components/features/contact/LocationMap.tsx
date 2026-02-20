@@ -1,5 +1,6 @@
 'use client';
 import { useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const SCHOOL_COORDINATES = [53.2478897, 10.423409]; // [lat, lng] from the provided URL
 
@@ -9,8 +10,9 @@ interface LocationMapProps {
 
 export function LocationMap({ className = '' }: LocationMapProps) {
   const mapRef = useRef<HTMLDivElement>(null);
+  const { t, i18n } = useTranslation();
 
-  const embedUrl = `https://maps.google.com/maps?q=${SCHOOL_COORDINATES[0]},${SCHOOL_COORDINATES[1]}&hl=de&z=16&output=embed`;
+  const embedUrl = `https://maps.google.com/maps?q=${SCHOOL_COORDINATES[0]},${SCHOOL_COORDINATES[1]}&hl=${i18n.language}&z=16&output=embed`;
 
   return (
     <div ref={mapRef} className={`relative ${className}`} style={{ minHeight: '300px' }}>
@@ -26,7 +28,7 @@ export function LocationMap({ className = '' }: LocationMapProps) {
         allowFullScreen
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
-        title="BBS I Lüneburg Lageplan"
+        title={t('mapTitle')}
       ></iframe>
     </div>
   );

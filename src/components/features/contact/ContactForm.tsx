@@ -1,5 +1,6 @@
 'use client';
 
+import { useTranslation } from 'react-i18next';
 import { useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 import { Button } from '@/components/ui/button';
@@ -15,6 +16,7 @@ interface FormData {
 }
 
 export function ContactForm() {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
@@ -41,7 +43,7 @@ export function ContactForm() {
     try {
       // validate
       if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
-        throw new Error('Alle Felder müssen ausgefüllt werden');
+        throw new Error(t('contact.form.validationError'));
       }
 
       // EmailJS Configuration
@@ -55,17 +57,11 @@ export function ContactForm() {
         to_name: 'D4M Team',
       };
 
-      console.log('Sending email with params:', templateParams);
-      console.log('Service ID:', serviceId);
-      console.log('Template ID:', templateId);
+      await emailjs.send(serviceId, templateId, templateParams);
 
-      const result = await emailjs.send(serviceId, templateId, templateParams);
-
-      console.log('Email sent successfully:', result);
       setSubmitStatus('success');
       setFormData({ name: '', email: '', message: '' });
-    } catch (error: any) {
-      console.error('Error sending email:', error);
+    } catch (error) {
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -77,12 +73,12 @@ export function ContactForm() {
       <CardContent className="p-6">
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="space-y-2">
-            <Label htmlFor="name">Name*</Label>
+            <Label htmlFor="name">{t('contact.form.name')}</Label>
             <Input
               id="name"
               name="name"
               type="text"
-              placeholder="Ihr Name"
+              placeholder={t('contact.form.namePlaceholder')}
               value={formData.name}
               onChange={handleInputChange}
               required
@@ -90,12 +86,12 @@ export function ContactForm() {
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="email">E-Mail*</Label>
+            <Label htmlFor="email">{t('contact.form.email')}</Label>
             <Input
               id="email"
               name="email"
               type="email"
-              placeholder="ihre.email@beispiel.de"
+              placeholder={t('contact.form.emailPlaceholder')}
               value={formData.email}
               onChange={handleInputChange}
               required
@@ -103,11 +99,11 @@ export function ContactForm() {
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="message">Nachricht*</Label>
+            <Label htmlFor="message">{t('contact.form.message')}</Label>
             <Textarea
               id="message"
               name="message"
-              placeholder="Ihre Nachricht an uns..."
+              placeholder={t('contact.form.messagePlaceholder')}
               value={formData.message}
               onChange={handleInputChange}
               rows={4}
@@ -116,18 +112,18 @@ export function ContactForm() {
           </div>
 
           <Button type="submit" className="w-full" disabled={isSubmitting}>
-            {isSubmitting ? 'Wird gesendet...' : 'Nachricht senden'}
+            {isSubmitting ? t('contact.form.sending') : t('contact.form.submit')}
           </Button>
 
           {submitStatus === 'success' && (
             <div className="p-4 bg-green-50 border border-green-200 rounded-md text-green-800">
-              ✅ Ihre Nachricht wurde erfolgreich gesendet! Wir werden uns bald bei Ihnen melden.
+              ✅ {t('contact.form.success')}
             </div>
           )}
 
           {submitStatus === 'error' && (
             <div className="p-4 bg-red-50 border border-red-200 rounded-md text-red-800">
-              ❌ Fehler beim Senden der Nachricht. Bitte versuchen Sie es erneut.
+              ❌ {t('contact.form.error')}
             </div>
           )}
         </form>

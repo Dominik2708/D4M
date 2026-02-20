@@ -1,0 +1,437 @@
+{
+    "header": {
+        "title": "Schülerunternehmen",
+        "subtitle": "BBS I Lüneburg · HA25B",
+        "nav": {
+            "products": "Unsere Produkte",
+            "quiz": "Quiz",
+            "about": "Über uns",
+            "events": "Termine",
+            "archive": "Archiv",
+            "contact": "Kontakt"
+        },
+        "menuOpen": "Menü öffnen",
+        "menuTitle": "Menü",
+        "mobileNav": "Mobile Navigation",
+        "mainNav": "Hauptnavigation"
+    },
+    "hero": {
+        "title": "Schülerunternehmen",
+        "subtitle": "BBS I Lüneburg · HA25B",
+        "legalTitle": "Rechtlicher Hinweis:",
+        "legalText": "Dies ist ein Schülerunternehmen der BBS I Lüneburg (Klasse HA25B). Wir sind von der Mehrwertsteuer befreit und unterliegen besonderen Haftungsbestimmungen für Schülerunternehmen.",
+        "description": "Willkommen bei unserem innovativen Schülerunternehmen! Als kreatives Startup-Projekt der einjährigen Berufsfachschule Wirtschaft mit den Schwerpunkten Handel und IT entwickeln und produzieren wir nachhaltige Lösungen mit modernster 3D-Druck-Technologie.",
+        "productsButton": "Unsere Produkte",
+        "quizButton": "Quiz starten",
+        "quizAriaLabel": "Quiz starten"
+    },
+    "productsSection": {
+        "title": "Unsere Produktbereiche",
+        "subtitle": "Innovative Lösungen durch moderne Technologie und traditionelles Handwerk",
+        "categories": [
+            {
+                "key": "3d",
+                "title": "3D-Drucktechnologie",
+                "description": "Innovative 3D-gedruckte Lösungen für den Alltag",
+                "category": "3D-Produkte",
+                "gradientFrom": "from-blue-400",
+                "gradientTo": "to-blue-600",
+                "features": [
+                    "Prototyping und Produktentwicklung",
+                    "Maßgeschneiderte Bauteile",
+                    "Nachhaltige Materialien (PLA, PETG)",
+                    "Rapid Prototyping Service",
+                    "Designberatung und Optimierung"
+                ],
+                "images": [
+                    "/images/plastic/keychain_1.jpeg",
+                    "/images/plastic/keychain_2.jpeg",
+                    "/images/plastic/keychain_3.jpeg",
+                    "/images/plastic/keychain_4.jpeg"
+                ]
+            },
+            {
+                "key": "wood",
+                "title": "Holzverarbeitung Werkstatt",
+                "description": "Traditionelle Holzverarbeitung in Kooperation mit der BBS II",
+                "category": "Holzprodukte",
+                "gradientFrom": "from-amber-400",
+                "gradientTo": "to-orange-600",
+                "features": [
+                    "Möbelbau und Innenausstattung",
+                    "Dekorative Holzgegenstände",
+                    "Restaurierung und Reparaturen",
+                    "Nachhaltige Forstwirtschaft",
+                    "Handwerkliche Sonderanfertigungen"
+                ],
+                "images": [
+                    "/images/wood/birdhouse_1.jpeg",
+                    "/images/wood/jewlerycase_1.jpeg",
+                    "/images/wood/keyholder_1.jpeg",
+                    "/images/wood/pictureframe_1.jpeg"
+                ]
+            }
+        ],
+        "servicesTitle": "Unsere Leistungen",
+        "noteTitle": "Hinweis:",
+        "noteText": "Alle Produkte werden zu Bildungszwecken erstellt. Keine kommerziellen Preisangaben verfügbar.",
+        "customTitle": "Individuelle Anfertigungen:",
+        "customText": "Sie haben eine spezielle Idee? Schicken Sie uns Ihre Anfrage",
+        "customLinkText": "hier",
+        "coopTitle": "Kooperation:",
+        "coopText": "Gemeinsames Projekt mit der BBS II - Verbindung von traditionellem Handwerk und moderner Technik.",
+        "productAlt": "Produkt"
+    },
+    "quiz": {
+        "title": "Wasser-Plastik-Quiz",
+        "subtitle": "Teste dein Wissen über Plastikverschmutzung in unseren Gewässern",
+        "questionOf": "Frage {{current}} von {{total}}",
+        "doublePoints": "x2 Für diese Antwort gibt es doppelte Punktzahl.",
+        "score": "Score: {{score}}/{{max}}",
+        "topicTitle": "Plastikverschmutzung im Wasser",
+        "nextQuestion": "Nächste Frage",
+        "finishQuiz": "Quiz beenden",
+        "completed": "Quiz abgeschlossen!",
+        "perfectScore": "Perfekt! Du kennst dich bestens mit Umweltthemen aus!",
+        "goodScore": "Gut gemacht! Du hast ein solides Wissen über Umweltthemen.",
+        "lowScore": "Nicht schlecht! Es gibt noch einiges zu lernen über Umweltschutz.",
+        "workshopHint": "Besuche unsere Workshops, um mehr über nachhaltige 3D-Druck-Technologie zu erfahren!",
+        "retry": "Quiz wiederholen",
+        "questions": [
+            {
+                "question": "Wie lange dauert es, bis sich Plastikmüll im Meer abgebaut hat?",
+                "options": [
+                    "500 Jahre",
+                    "1 Jahr",
+                    "10 Jahre",
+                    "200 Jahre"
+                ]
+            },
+            {
+                "question": "Wie viele Tiere sterben jährlich am Plastikmüll im Meer?",
+                "options": [
+                    "1,5 Millionen",
+                    "10.000",
+                    "100.000",
+                    "100 Millionen"
+                ]
+            },
+            {
+                "question": "Welches ist das größte Korallenriff auf der Erde?",
+                "options": [
+                    "Great Barrier Reef",
+                    "Ningaloo Reef",
+                    "Amazonas Reef",
+                    "Großes Asienriff"
+                ]
+            },
+            {
+                "question": "Wie lange ist das größte Korallenriff?",
+                "options": [
+                    "2.300 km",
+                    "800 km",
+                    "5.250 km",
+                    "2,3 km"
+                ]
+            },
+            {
+                "question": "Wie tief ist der Marianengraben an seiner tiefsten Stelle?",
+                "options": [
+                    "11 km (≈ 11.000 m)",
+                    "25 km",
+                    "3,8 km",
+                    "1,5 km"
+                ]
+            },
+            {
+                "question": "Wie tief kann das Licht ins Meer eindringen (noch sichtbar für Menschen)?",
+                "options": [
+                    "300 m",
+                    "150 m",
+                    "75 m",
+                    "37 m"
+                ]
+            },
+            {
+                "question": "Wie viel Prozent der Ozeane sind bereits erforscht?",
+                "options": [
+                    "5–10 %",
+                    "2–4 %",
+                    "15–20 %",
+                    "50–60 %"
+                ]
+            },
+            {
+                "question": "Wie lang ist die längste Bergkette im Meer?",
+                "options": [
+                    "65.000 km",
+                    "65 km",
+                    "650 km",
+                    "6.500 km"
+                ]
+            },
+            {
+                "question": "Welcher Ozean ist der größte der Erde?",
+                "options": [
+                    "Pazifischer Ozean",
+                    "Indischer Ozean",
+                    "Atlantischer Ozean",
+                    "Arktischer Ozean"
+                ]
+            },
+            {
+                "question": "Wie viel Prozent der Erdoberfläche sind mit Wasser bedeckt?",
+                "options": [
+                    "71 %",
+                    "51 %",
+                    "61 %",
+                    "81 %"
+                ]
+            },
+            {
+                "question": "Welches Meer hat den höchsten Salzgehalt?",
+                "options": [
+                    "Totes Meer",
+                    "Mittelmeer",
+                    "Schwarzes Meer",
+                    "Nordsee"
+                ]
+            },
+            {
+                "question": "Wie heißen die weltweiten warmen Meeresströmungen, die das Klima beeinflussen?",
+                "options": [
+                    "Thermohaline Zirkulation",
+                    "Passatwinde",
+                    "La Niña",
+                    "Taifun-Zirkulation"
+                ]
+            },
+            {
+                "question": "Welche Farbe des Lichts dringt am tiefsten ins Meer?",
+                "options": [
+                    "Blau",
+                    "Rot",
+                    "Gelb",
+                    "Grün"
+                ]
+            },
+            {
+                "question": "Welches Meer ist das größte Binnenmeer der Welt?",
+                "options": [
+                    "Kaspisches Meer",
+                    "Mittelmeer",
+                    "Schwarzes Meer",
+                    "Rotes Meer"
+                ]
+            },
+            {
+                "question": "Wie nennt man das Phänomen, wenn Wasserpflanzen massenhaft wachsen und das Wasser grün färben?",
+                "options": [
+                    "Algenblüte",
+                    "Meeresleuchten",
+                    "Gezeitenströmung",
+                    "Planktonwachstum"
+                ]
+            },
+            {
+                "question": "Wie nennt man die Zone, in der das Licht vollständig verschwindet?",
+                "options": [
+                    "Aphotische Zone",
+                    "Euphotische Zone",
+                    "Thermokline",
+                    "Bathypelagische Zone"
+                ]
+            },
+            {
+                "question": "Was ist die Hauptursache für Gezeiten (Ebbe und Flut)?",
+                "options": [
+                    "Schwerkraft von Mond und Sonne",
+                    "Windströmungen",
+                    "Sonnenenergie",
+                    "Vulkanische Aktivität"
+                ]
+            },
+            {
+                "question": "Wie viel Prozent des Meeresmülls besteht aus Plastik?",
+                "options": [
+                    "80 %",
+                    "20 %",
+                    "40 %",
+                    "60 %"
+                ]
+            }
+        ]
+    },
+    "about": {
+        "title": "Wir über uns",
+        "subtitle": "Ein kreatives und innovatives Startup-Projekt der Klasse HA25B",
+        "schoolLabel": "BBS I Lüneburg · HA25B",
+        "schoolSub": "Unsere Schülerfirma",
+        "descriptionP1": "Unsere Schülerfirma ist ein kreatives und innovatives Startup-Projekt der Schüler/-innen der HA25B der einjährigen Berufsfachschule Wirtschaft mit den Schwerpunkten Handel und IT an den Berufsbildenden Schulen I Lüneburg. Wir haben uns auf den Bereich 3D-Druck spezialisiert und setzen unsere Ideen mit viel Motivation und Teamgeist in die Tat um.",
+        "descriptionP2": "In einem Design-Thinking-Prozess haben wir durch Interviews mit potenziellen Kunden herausgefunden, welche Produkte gefragt sind – diese entwickeln und produzieren wir nun. Außerdem arbeiten wir in einer Kooperation mit der gewerblichen BBS II: Dort gefertigte Holzprodukte vermarkten wir als angehende Handelsprofis.",
+        "points": [
+            {
+                "title": "Design Thinking",
+                "description": "Kundenorientierte Produktentwicklung durch systematische Marktforschung"
+            },
+            {
+                "title": "Handelskompetenz",
+                "description": "Vermarktung von Produkten als angehende Handelsprofis"
+            },
+            {
+                "title": "Teamwork",
+                "description": "Offenes Team mit starker, hilfsbereiter Zusammenarbeit"
+            }
+        ],
+        "missionTitle": "Unser Ansatz und Ziel",
+        "missionP1": "Als Schülerunternehmen setzen wir auf Teamarbeit, Kreativität und gegenseitige Unterstützung. Jede Idee zählt, jeder Beitrag ist wertvoll. Wir sind ein offenes Team, das sich stetig weiterentwickelt und innovative Lösungen für spannende Projekte schafft.",
+        "missionP2Goal": "Unser Ziel:",
+        "missionP2": "Mit unseren Produkten einen echten Mehrwert für die Gemeinschaft zu bieten – und dabei Erfahrung für unsere berufliche Zukunft zu sammeln.",
+        "missionP3": "Unsere Schülerfirma steht für Kreativität, Motivation und eine starke, hilfsbereite Zusammenarbeit – und wir freuen uns darauf, noch viele spannende Projekte zu realisieren!"
+    },
+    "events": {
+        "title": "Kommende Termine",
+        "subtitle": "Besuchen Sie uns auf unseren Veranstaltungen und Märkten und lernen Sie unsere Produkte persönlich kennen",
+        "items": [
+            {
+                "title": "Wirtschaft-Live-Messe",
+                "date": "18. März 2026",
+                "time": "ganztägig",
+                "location": "Berufsschule Niedersachsen",
+                "type": "Wettbewerb",
+                "description": "Landesweite Messe der Schülerunternehmen aus ganz Niedersachsen mit ca. 20 teilnehmenden Teams. Wettbewerbe: bester Messestand, bester Messebandeitrag, bester Imagefilm und beste Fotopräsentation der Geschäftsidee."
+            },
+            {
+                "title": "Summer-Sale",
+                "date": "Juni 2026",
+                "time": "Ende des Schuljahres",
+                "location": "BBS I Lüneburg",
+                "type": "Verkauf",
+                "description": "Verkauf übrig gebliebener Produkte zu reduzierten Preisen sowie extra hergestellte Sommer-Artikel wie Insektenschutz für Getränke und weitere saisonale 3D-Druck Produkte."
+            }
+        ],
+        "messeTitle": "Wirtschaft-Live-Messe Ziele",
+        "messeText": "Die Messe bietet den Jugendlichen die Möglichkeit, ihre Geschäftsideen und Produkte einer breiten Öffentlichkeit vorzustellen. Ziel der Messe ist es, unternehmerisches Denken und Handeln praxisnah zu fördern, wirtschaftliche Kompetenzen zu stärken und den Austausch zwischen Schüler/-innen, Schulen, Wirtschaft und Politik zu unterstützen.",
+        "summerTitle": "Summer-Sale Besonderheiten",
+        "summerText": "Beim Summer-Sale bieten wir nicht nur übrig gebliebene Produkte zu reduzierten Preisen an, sondern auch speziell für den Sommer entwickelte Artikel. Ein Highlight sind unsere 3D-gedruckten Insektenschutz-Lösungen für Getränke."
+    },
+    "archive": {
+        "title": "Archiv",
+        "subtitle": "Ein Rückblick auf unsere bisherigen Projekte, Erfolge und Entwicklungen",
+        "badgeProjects": "Projekte",
+        "badgeSuccesses": "Erfolge",
+        "badgeDocuments": "Dokumente",
+        "projectsYear": "Projekte {{year}}",
+        "footer": "Alle Projekte dokumentieren unseren Lernprozess und die Entwicklung unseres Schülerunternehmens seit der Gründung.",
+        "items": [
+            {
+                "title": "Nachhaltiger Smartphone-Ständer",
+                "date": "Oktober 2023",
+                "category": "3D-Druck",
+                "description": "Entwicklung eines ergonomischen Smartphone-Ständers aus recyceltem PLA-Material",
+                "achievement": "1. Platz beim Schüler-Innovationswettbewerb"
+            },
+            {
+                "title": "Holz-Technik Fusion",
+                "date": "September 2023",
+                "category": "Kooperation",
+                "description": "Erstes gemeinsames Projekt mit BBS II - Kombination aus 3D-gedruckten Verbindungselementen und Holzverarbeitung",
+                "achievement": "Erfolgreiche Kooperationsstart"
+            },
+            {
+                "title": "Umwelt-Workshop Serie",
+                "date": "Juni 2023",
+                "category": "Bildung",
+                "description": "5-teilige Workshop-Reihe zum Thema Mikroplastik und 3D-Druck-Alternativen",
+                "achievement": "45 teilnehmende Schüler"
+            },
+            {
+                "title": "Gründung Schülerunternehmen",
+                "date": "Februar 2022",
+                "category": "Meilenstein",
+                "description": "Offizielle Gründung des Schülerunternehmens an der BBS I Technik",
+                "achievement": "Grundstein für alle Folgeaktivitäten"
+            },
+            {
+                "title": "Erste 3D-Drucker Anschaffung",
+                "date": "April 2022",
+                "category": "Ausstattung",
+                "description": "Installation der ersten 3D-Drucker und Aufbau des Technikraums",
+                "achievement": "Technische Grundausstattung"
+            },
+            {
+                "title": "Prototyp-Entwicklung",
+                "date": "November 2022",
+                "category": "3D-Druck",
+                "description": "Erste eigenständige Prototypen für Alltagsgegenstände",
+                "achievement": "Lernerfolg Produktentwicklung"
+            }
+        ]
+    },
+    "contact": {
+        "title": "Kontakt & Standort",
+        "subtitle": "Fragen, Ideen oder Interesse an einer Zusammenarbeit? Wir freuen uns auf deine Nachricht!",
+        "formTitle": "Kontaktformular",
+        "formSubtitle": "Sende uns eine Nachricht - wir antworten in der Regel innerhalb von 2-3 Werktagen",
+        "infoTitle": "Kontaktinformationen",
+        "infoSubtitle": "Verschiedene Wege, uns zu erreichen",
+        "mapTitle": "Lageplan & Anfahrt",
+        "directionsTitle": "Anfahrt",
+        "byCar": "Mit dem Auto:",
+        "byCarText": "A39 Ausfahrt Lüneburg Nord, dann B216 Richtung Zentrum",
+        "byPublic": "Öffentlich:",
+        "byPublicText": "Buslinien 5011, 5012 - Haltestelle \"BBS I\"",
+        "form": {
+            "name": "Name",
+            "namePlaceholder": "Ihr Name",
+            "email": "E-Mail",
+            "emailPlaceholder": "ihre.email@beispiel.de",
+            "message": "Nachricht",
+            "messagePlaceholder": "Ihre Nachricht an uns...",
+            "submit": "Nachricht senden",
+            "sending": "Wird gesendet...",
+            "success": "Ihre Nachricht wurde erfolgreich gesendet! Wir werden uns bald bei Ihnen melden.",
+            "error": "Fehler beim Senden der Nachricht. Bitte versuchen Sie es erneut.",
+            "validationError": "Alle Felder müssen ausgefüllt werden"
+        },
+        "info": {
+            "email": "E-Mail",
+            "phone": "Telefon",
+            "address": "Adresse",
+            "addressContent": "BBS I - Berufsbildende Schulen\nSpillbrunnenweg 1\n21337 Lüneburg"
+        }
+    },
+    "footer": {
+        "title": "Schülerunternehmen",
+        "subtitle": "BBS I Lüneburg",
+        "description": "Innovative Lösungen durch 3D-Druck und nachhaltige Holzverarbeitung. Ein Bildungsprojekt der BBS I Lüneburg.",
+        "navigation": "Navigation",
+        "impressum": "Impressum",
+        "datenschutz": "Datenschutz",
+        "contactTitle": "Kontakt",
+        "footerNav": "Fußzeilen-Navigation",
+        "copyright": "© 2024 Schülerunternehmen BBS I Lüneburg. Alle Rechte vorbehalten.",
+        "educational": "Bildungsprojekt",
+        "nonCommercial": "Nicht gewerblich",
+        "vatExempt": "MwSt.-befreit"
+    },
+    "impressum": {
+        "title": "Impressum",
+        "subtitle": "Rechtliche Informationen gemäß § 5 TMG",
+        "schoolName": "Berufsbildende Schulen I Lüneburg",
+        "address": "Adresse",
+        "addressContent": "Spillbrunnenweg 1\n21337 Lüneburg\nDeutschland",
+        "contactTitle": "Kontakt",
+        "phone": "Telefon:",
+        "email": "E‑Mail:",
+        "representative": "Vertretungsberechtigt",
+        "representativeTitle": "Oberstudiendirektor",
+        "representativeName": "Heiko Lüdemann",
+        "moreInfo": "Weitere Informationen",
+        "privacyPolicy": "Datenschutzerklärung",
+        "officialWebsite": "Offizielle Website",
+        "legalNotices": "Rechtliche Hinweise",
+        "legalNoticesText": "Diese Angaben sind gemäß § 5 TMG (Telemediengesetz) verpflichtend anzugeben."
+    },
+    "mapTitle": "BBS I Lüneburg Lageplan"
+}

@@ -1,32 +1,35 @@
 'use client';
 
+import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 import { MapPin, Phone, Mail } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 
-const navigationLinks = [
-  { href: '/impressum', label: 'Impressum' },
-  { href: '/datenschutz', label: 'Datenschutz' },
-];
-
-const contactInfo = [
-  {
-    icon: Mail,
-    content: 'schuelerunternehmen@bbs1-lueneburg.de',
-  },
-  {
-    icon: Phone,
-    content: '04131 - 207 400',
-  },
-  {
-    icon: MapPin,
-    content: ['BBS I Lüneburg', 'Spillbrunnenweg 1', '21335 Lüneburg'],
-  },
-];
-
 export function Footer() {
+  const { t } = useTranslation();
+
+  const navigationLinks = [
+    { href: '/impressum', label: t('footer.impressum') },
+    { href: '/datenschutz', label: t('footer.datenschutz') },
+  ];
+
+  const contactInfo = [
+    {
+      icon: Mail,
+      content: 'schuelerunternehmen@bbs1-lueneburg.de',
+    },
+    {
+      icon: Phone,
+      content: '04131 - 207 400',
+    },
+    {
+      icon: MapPin,
+      content: ['BBS I Lüneburg', 'Spillbrunnenweg 1', '21335 Lüneburg'],
+    },
+  ];
+
   return (
     <footer className="bg-background text-foreground py-16">
       <div className="container mx-auto px-4">
@@ -38,20 +41,19 @@ export function Footer() {
                 <Image src="/images/logo.png" alt="Logo" width={32} height={32} />
               </div>
               <div>
-                <h3 className="font-bold text-lg">Schülerunternehmen</h3>
-                <p className="text-sm text-muted-foreground">BBS I Lüneburg</p>
+                <h3 className="font-bold text-lg">{t('footer.title')}</h3>
+                <p className="text-sm text-muted-foreground">{t('footer.subtitle')}</p>
               </div>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Innovative Lösungen durch 3D-Druck und nachhaltige Holzverarbeitung. Ein
-              Bildungsprojekt der BBS I Lüneburg.
+              {t('footer.description')}
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-semibold text-lg mb-4">Navigation</h4>
-            <nav className="flex flex-col space-y-2" aria-label="Fußzeilen-Navigation">
+            <h4 className="font-semibold text-lg mb-4">{t('footer.navigation')}</h4>
+            <nav className="flex flex-col space-y-2" aria-label={t('footer.footerNav')}>
               {navigationLinks.map(link => (
                 <Button
                   key={link.href}
@@ -67,7 +69,7 @@ export function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h4 className="font-semibold text-lg mb-4">Kontakt</h4>
+            <h4 className="font-semibold text-lg mb-4">{t('footer.contactTitle')}</h4>
             <div className="space-y-3">
               {contactInfo.map((info, index) => {
                 const Icon = info.icon;
@@ -96,14 +98,14 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground">
-            © 2024 Schülerunternehmen BBS I Lüneburg. Alle Rechte vorbehalten.
+            {t('footer.copyright')}
           </p>
           <div className="flex items-center gap-4 text-xs text-muted-foreground">
-            <span>Bildungsprojekt</span>
+            <span>{t('footer.educational')}</span>
             <span>•</span>
-            <span>Nicht gewerblich</span>
+            <span>{t('footer.nonCommercial')}</span>
             <span>•</span>
-            <span>MwSt.-befreit</span>
+            <span>{t('footer.vatExempt')}</span>
           </div>
         </div>
       </div>
