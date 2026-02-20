@@ -121,7 +121,11 @@ export function QuizSection() {
     return indices.slice(0, count);
   };
 
-  const [doubleIndices, setDoubleIndices] = useState<number[]>(() => getDoubleIndices());
+  const [doubleIndices, setDoubleIndices] = useState<number[]>([]);
+  
+  useEffect(() => {
+    setDoubleIndices(getDoubleIndices());
+  }, []);
 
   const maxScore = questions.length + doubleIndices.length;
 

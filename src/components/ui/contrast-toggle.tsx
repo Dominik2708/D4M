@@ -38,6 +38,11 @@ export function ContrastToggle() {
       title={highContrast ? 'Normalen Kontrast aktivieren' : 'Hohen Kontrast aktivieren'}
       aria-pressed={highContrast}
       className={highContrast ? 'bg-accent hover:bg-accent/90' : ''}
+      style={
+        highContrast
+          ? { backgroundColor: '#ffffff', color: '#000000', borderColor: '#000000' }
+          : undefined
+      }
     >
       <Contrast className="h-5 w-5" />
       <span className="sr-only">
