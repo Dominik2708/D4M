@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -14,6 +15,7 @@ interface FormData {
 }
 
 export function ContactForm() {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
@@ -27,10 +29,7 @@ export function ContactForm() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
     console.log('Form submitted:', formData);
-
-    // Reset form
     setFormData({ name: '', email: '', message: '' });
   };
 
@@ -39,12 +38,12 @@ export function ContactForm() {
       <CardContent className="p-6">
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="space-y-2">
-            <Label htmlFor="name">Name</Label>
+            <Label htmlFor="name">{t('contact.form.name')}</Label>
             <Input
               id="name"
               name="name"
               type="text"
-              placeholder="Ihr Name"
+              placeholder={t('contact.form.namePlaceholder')}
               value={formData.name}
               onChange={handleInputChange}
               required
@@ -52,12 +51,12 @@ export function ContactForm() {
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="email">E-Mail</Label>
+            <Label htmlFor="email">{t('contact.form.email')}</Label>
             <Input
               id="email"
               name="email"
               type="email"
-              placeholder="ihre.email@beispiel.de"
+              placeholder={t('contact.form.emailPlaceholder')}
               value={formData.email}
               onChange={handleInputChange}
               required
@@ -65,11 +64,11 @@ export function ContactForm() {
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="message">Nachricht</Label>
+            <Label htmlFor="message">{t('contact.form.message')}</Label>
             <Textarea
               id="message"
               name="message"
-              placeholder="Ihre Nachricht an uns..."
+              placeholder={t('contact.form.messagePlaceholder')}
               value={formData.message}
               onChange={handleInputChange}
               rows={4}
@@ -78,7 +77,7 @@ export function ContactForm() {
           </div>
 
           <Button type="submit" className="w-full">
-            Nachricht senden
+            {t('contact.form.submit')}
           </Button>
         </form>
       </CardContent>
