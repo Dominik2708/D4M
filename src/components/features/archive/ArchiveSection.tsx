@@ -1,3 +1,6 @@
+'use client';
+
+import { useTranslation } from 'react-i18next';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Calendar, Award, Users, FileText, Wrench } from 'lucide-react';
@@ -5,65 +8,25 @@ import { Calendar, Award, Users, FileText, Wrench } from 'lucide-react';
 interface ArchiveItem {
   title: string;
   date: string;
-  type: 'project' | 'success' | 'milestone' | 'equipment';
+  category: string;
   description: string;
   achievement?: string;
-  category: string;
 }
 
-const archiveItems: ArchiveItem[] = [
-  {
-    title: 'Nachhaltiger Smartphone-Ständer',
-    date: 'Oktober 2023',
-    type: 'project',
-    category: '3D-Druck',
-    description: 'Entwicklung eines ergonomischen Smartphone-Ständers aus recyceltem PLA-Material',
-    achievement: '1. Platz beim Schüler-Innovationswettbewerb',
-  },
-  {
-    title: 'Holz-Technik Fusion',
-    date: 'September 2023',
-    type: 'project',
-    category: 'Kooperation',
-    description:
-      'Erstes gemeinsames Projekt mit BBS II - Kombination aus 3D-gedruckten Verbindungselementen und Holzverarbeitung',
-    achievement: 'Erfolgreiche Kooperationsstart',
-  },
-  {
-    title: 'Umwelt-Workshop Serie',
-    date: 'Juni 2023',
-    type: 'success',
-    category: 'Bildung',
-    description: '5-teilige Workshop-Reihe zum Thema Mikroplastik und 3D-Druck-Alternativen',
-    achievement: '45 teilnehmende Schüler',
-  },
-  {
-    title: 'Gründung Schülerunternehmen',
-    date: 'Februar 2022',
-    type: 'milestone',
-    category: 'Meilenstein',
-    description: 'Offizielle Gründung des Schülerunternehmens an der BBS I',
-    achievement: 'Grundstein für alle Folgeaktivitäten',
-  },
-  {
-    title: 'Erste 3D-Drucker Anschaffung',
-    date: 'April 2022',
-    type: 'equipment',
-    category: 'Ausstattung',
-    description: 'Installation der ersten 3D-Drucker und Aufbau des Technikraums',
-    achievement: 'Technische Grundausstattung',
-  },
-  {
-    title: 'Prototyp-Entwicklung',
-    date: 'November 2022',
-    type: 'project',
-    category: '3D-Druck',
-    description: 'Erste eigenständige Prototypen für Alltagsgegenstände',
-    achievement: 'Lernerfolg Produktentwicklung',
-  },
-];
+const typeMap: Record<string, { type: string }> = {
+  '3D-Druck': { type: 'project' },
+  '3D Printing': { type: 'project' },
+  'Kooperation': { type: 'project' },
+  'Cooperation': { type: 'project' },
+  'Bildung': { type: 'success' },
+  'Education': { type: 'success' },
+  'Meilenstein': { type: 'milestone' },
+  'Milestone': { type: 'milestone' },
+  'Ausstattung': { type: 'equipment' },
+  'Equipment': { type: 'equipment' },
+};
 
-const getIcon = (type: ArchiveItem['type']) => {
+const getIcon = (type: string) => {
   switch (type) {
     case 'project':
       return FileText;
@@ -78,7 +41,7 @@ const getIcon = (type: ArchiveItem['type']) => {
   }
 };
 
-const getTypeColor = (type: ArchiveItem['type']) => {
+const getTypeColor = (type: string) => {
   switch (type) {
     case 'project':
       return 'bg-blue-100 text-blue-800';
@@ -94,8 +57,11 @@ const getTypeColor = (type: ArchiveItem['type']) => {
 };
 
 export function ArchiveSection() {
+  const { t } = useTranslation();
+  const archiveItems = t('archive.items', { returnObjects: true }) as ArchiveItem[];
+
   // Sort by year (most recent first)
-  const sortedItems = archiveItems.sort(
+  const sortedItems = [...archiveItems].sort(
     (a, b) => new Date(b.date).getFullYear() - new Date(a.date).getFullYear()
   );
 
@@ -113,9 +79,9 @@ export function ArchiveSection() {
     <section id="archive" className="py-20 px-4 bg-gray-50">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Archiv</h2>
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">{t('archive.title')}</h2>
           <p className="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
-            Ein Rückblick auf unsere bisherigen Projekte, Erfolge und Entwicklungen
+            {t('archive.subtitle')}
           </p>
         </div>
 
@@ -123,13 +89,13 @@ export function ArchiveSection() {
         <div className="flex justify-center mb-12">
           <div className="flex gap-4 flex-wrap">
             <Badge variant="outline" className="text-blue-700 border-blue-300">
-              Projekte
+              {t('archive.badgeProjects')}
             </Badge>
             <Badge variant="outline" className="text-green-700 border-green-300">
-              Erfolge
+              {t('archive.badgeSuccesses')}
             </Badge>
             <Badge variant="outline" className="text-orange-700 border-orange-300">
-              Dokumente
+              {t('archive.badgeDocuments')}
             </Badge>
           </div>
         </div>
@@ -137,11 +103,14 @@ export function ArchiveSection() {
         {/* Timeline by Year */}
         {Object.entries(itemsByYear).map(([year, items]) => (
           <div key={year} className="mb-12">
-            <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Projekte {year}</h3>
+            <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
+              {t('archive.projectsYear', { year })}
+            </h3>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {items.map((item, index) => {
-                const Icon = getIcon(item.type);
+                const itemType = typeMap[item.category]?.type || 'project';
+                const Icon = getIcon(itemType);
                 return (
                   <Card key={index} className="hover:shadow-lg transition-shadow">
                     <CardHeader className="pb-4">
@@ -150,7 +119,7 @@ export function ArchiveSection() {
                           <div className="bg-gray-100 rounded-lg p-2">
                             <Icon className="w-5 h-5 text-gray-600" />
                           </div>
-                          <Badge className={getTypeColor(item.type)}>{item.category}</Badge>
+                          <Badge className={getTypeColor(itemType)}>{item.category}</Badge>
                         </div>
                         <span className="text-sm text-gray-500">{item.date}</span>
                       </div>
@@ -177,8 +146,7 @@ export function ArchiveSection() {
         {/* Archive Footer */}
         <div className="text-center mt-16">
           <p className="text-gray-600">
-            Alle Projekte dokumentieren unseren Lernprozess und die Entwicklung unseres
-            Schülerunternehmens seit der Gründung.
+            {t('archive.footer')}
           </p>
         </div>
       </div>

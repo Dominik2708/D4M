@@ -1,0 +1,433 @@
+{
+    "header": {
+        "title": "Student Enterprise",
+        "subtitle": "BBS I Lüneburg · HA25B",
+        "nav": {
+            "products": "Our Products",
+            "quiz": "Quiz",
+            "about": "About Us",
+            "events": "Events",
+            "archive": "Archive",
+            "contact": "Contact"
+        },
+        "menuOpen": "Open menu",
+        "menuTitle": "Menu",
+        "mobileNav": "Mobile Navigation",
+        "mainNav": "Main navigation"
+    },
+    "hero": {
+        "title": "Student Enterprise",
+        "subtitle": "BBS I Lüneburg · HA25B",
+        "legalTitle": "Legal Notice:",
+        "legalText": "This is a student enterprise of BBS I Lüneburg (class HA25B). We are exempt from VAT and are subject to special liability provisions for student enterprises.",
+        "description": "Welcome to our innovative student enterprise! As a creative startup project of the one-year vocational school for business with a focus on trade and IT, we develop and produce sustainable solutions using state-of-the-art 3D printing technology.",
+        "productsButton": "Our Products",
+        "quizButton": "Start Quiz",
+        "quizAriaLabel": "Start Quiz"
+    },
+    "productsSection": {
+        "title": "Our Product Areas",
+        "subtitle": "Innovative solutions through modern technology and traditional craftsmanship",
+        "categories": [
+            {
+                "key": "3d",
+                "title": "3D Printing Technology",
+                "description": "Innovative 3D-printed solutions for everyday use",
+                "category": "3D Products",
+                "gradientFrom": "from-blue-400",
+                "gradientTo": "to-blue-600",
+                "features": [
+                    "Prototyping and product development",
+                    "Customized components",
+                    "Sustainable materials (PLA, PETG)",
+                    "Rapid prototyping service",
+                    "Design consulting and optimization"
+                ],
+                "images": [
+                    "/images/plastic/keychain_1.jpeg",
+                    "/images/plastic/keychain_2.jpeg",
+                    "/images/plastic/keychain_3.jpeg",
+                    "/images/plastic/keychain_4.jpeg"
+                ]
+            },
+            {
+                "key": "wood",
+                "title": "Woodworking Workshop",
+                "description": "Traditional woodworking in cooperation with BBS II",
+                "category": "Wood Products",
+                "gradientFrom": "from-amber-400",
+                "gradientTo": "to-orange-600",
+                "features": [
+                    "Furniture construction and interior design",
+                    "Decorative wooden objects",
+                    "Restoration and repairs",
+                    "Sustainable forestry",
+                    "Handcrafted custom pieces"
+                ],
+                "images": [
+                    "/images/wood/birdhouse_1.jpeg",
+                    "/images/wood/jewlerycase_1.jpeg",
+                    "/images/wood/keyholder_1.jpeg",
+                    "/images/wood/pictureframe_1.jpeg"
+                ]
+            }
+        ],
+        "servicesTitle": "Our Services",
+        "noteTitle": "Note:",
+        "noteText": "All products are created for educational purposes. No commercial pricing available.",
+        "customTitle": "Custom Creations:",
+        "customText": "Have a special idea? Send us your request",
+        "customLinkText": "here",
+        "coopTitle": "Cooperation:",
+        "coopText": "Joint project with BBS II - Connecting traditional craftsmanship and modern technology.",
+        "productAlt": "Product"
+    },
+    "quiz": {
+        "title": "Water & Plastic Quiz",
+        "subtitle": "Test your knowledge about plastic pollution in our waters",
+        "questionOf": "Question {{current}} of {{total}}",
+        "doublePoints": "x2 Double points for this answer.",
+        "score": "Score: {{score}}/{{max}}",
+        "topicTitle": "Plastic Pollution in Water",
+        "nextQuestion": "Next Question",
+        "finishQuiz": "Finish Quiz",
+        "completed": "Quiz Completed!",
+        "perfectScore": "Perfect! You know a lot about environmental topics!",
+        "goodScore": "Well done! You have solid knowledge about environmental topics.",
+        "lowScore": "Not bad! There's still a lot to learn about environmental protection.",
+        "workshopHint": "Visit our workshops to learn more about sustainable 3D printing technology!",
+        "retry": "Retry Quiz",
+        "questions": [
+            {
+                "question": "How long does it take for plastic waste to decompose in the ocean?",
+                "options": [
+                    "500 years",
+                    "1 year",
+                    "10 years",
+                    "200 years"
+                ]
+            },
+            {
+                "question": "How many animals die from plastic waste in the ocean each year?",
+                "options": [
+                    "1.5 million",
+                    "10,000",
+                    "100,000",
+                    "100 million"
+                ]
+            },
+            {
+                "question": "What is the largest coral reef on Earth?",
+                "options": [
+                    "Great Barrier Reef",
+                    "Ningaloo Reef",
+                    "Amazon Reef",
+                    "Great Asian Reef"
+                ]
+            },
+            {
+                "question": "How long is the largest coral reef?",
+                "options": [
+                    "2,300 km",
+                    "800 km",
+                    "5,250 km",
+                    "2.3 km"
+                ]
+            },
+            {
+                "question": "How deep is the Mariana Trench at its deepest point?",
+                "options": [
+                    "11 km (≈ 11,000 m)",
+                    "25 km",
+                    "3.8 km",
+                    "1.5 km"
+                ]
+            },
+            {
+                "question": "How deep can light penetrate the ocean (still visible to humans)?",
+                "options": [
+                    "300 m",
+                    "150 m",
+                    "75 m",
+                    "37 m"
+                ]
+            },
+            {
+                "question": "What percentage of the oceans has already been explored?",
+                "options": [
+                    "5–10%",
+                    "2–4%",
+                    "15–20%",
+                    "50–60%"
+                ]
+            },
+            {
+                "question": "How long is the longest mountain range in the ocean?",
+                "options": [
+                    "65,000 km",
+                    "65 km",
+                    "650 km",
+                    "6,500 km"
+                ]
+            },
+            {
+                "question": "Which is the largest ocean on Earth?",
+                "options": [
+                    "Pacific Ocean",
+                    "Indian Ocean",
+                    "Atlantic Ocean",
+                    "Arctic Ocean"
+                ]
+            },
+            {
+                "question": "What percentage of the Earth's surface is covered with water?",
+                "options": [
+                    "71%",
+                    "51%",
+                    "61%",
+                    "81%"
+                ]
+            },
+            {
+                "question": "Which sea has the highest salt content?",
+                "options": [
+                    "Dead Sea",
+                    "Mediterranean Sea",
+                    "Black Sea",
+                    "North Sea"
+                ]
+            },
+            {
+                "question": "What are the global warm ocean currents that influence the climate called?",
+                "options": [
+                    "Thermohaline circulation",
+                    "Trade winds",
+                    "La Niña",
+                    "Typhoon circulation"
+                ]
+            },
+            {
+                "question": "Which color of light penetrates deepest into the ocean?",
+                "options": [
+                    "Blue",
+                    "Red",
+                    "Yellow",
+                    "Green"
+                ]
+            },
+            {
+                "question": "Which sea is the largest inland sea in the world?",
+                "options": [
+                    "Caspian Sea",
+                    "Mediterranean Sea",
+                    "Black Sea",
+                    "Red Sea"
+                ]
+            },
+            {
+                "question": "What is the phenomenon called when aquatic plants grow massively and turn the water green?",
+                "options": [
+                    "Algal bloom",
+                    "Bioluminescence",
+                    "Tidal current",
+                    "Plankton growth"
+                ]
+            },
+            {
+                "question": "What is the zone called where light completely disappears?",
+                "options": [
+                    "Aphotic zone",
+                    "Euphotic zone",
+                    "Thermocline",
+                    "Bathypelagic zone"
+                ]
+            },
+            {
+                "question": "What is the main cause of tides (ebb and flow)?",
+                "options": [
+                    "Gravity of the Moon and Sun",
+                    "Wind currents",
+                    "Solar energy",
+                    "Volcanic activity"
+                ]
+            },
+            {
+                "question": "What percentage of ocean waste consists of plastic?",
+                "options": [
+                    "80%",
+                    "20%",
+                    "40%",
+                    "60%"
+                ]
+            }
+        ]
+    },
+    "about": {
+        "title": "About Us",
+        "subtitle": "A creative and innovative startup project by class HA25B",
+        "schoolLabel": "BBS I Lüneburg · HA25B",
+        "schoolSub": "Our Student Enterprise",
+        "descriptionP1": "Our student enterprise is a creative and innovative startup project by students of class HA25B at the one-year vocational school for business with a focus on trade and IT at the vocational schools BBS I Lüneburg. We specialize in 3D printing and turn our ideas into reality with great motivation and team spirit.",
+        "descriptionP2": "Through a design thinking process, we conducted interviews with potential customers to find out which products are in demand – and now we develop and produce them. We also work in cooperation with the vocational school BBS II: We market their woodworking products as aspiring trade professionals.",
+        "points": [
+            {
+                "title": "Design Thinking",
+                "description": "Customer-oriented product development through systematic market research"
+            },
+            {
+                "title": "Trade Skills",
+                "description": "Marketing products as aspiring trade professionals"
+            },
+            {
+                "title": "Teamwork",
+                "description": "Open team with strong, supportive collaboration"
+            }
+        ],
+        "missionTitle": "Our Approach and Goal",
+        "missionP1": "As a student enterprise, we rely on teamwork, creativity, and mutual support. Every idea counts, every contribution is valuable. We are an open team that is constantly evolving and creating innovative solutions for exciting projects.",
+        "missionP2Goal": "Our Goal:",
+        "missionP2": "To provide real added value for the community with our products – while gaining experience for our professional future.",
+        "missionP3": "Our student enterprise stands for creativity, motivation, and strong, supportive collaboration – and we look forward to realizing many more exciting projects!"
+    },
+    "events": {
+        "title": "Upcoming Events",
+        "subtitle": "Visit us at our events and markets and get to know our products in person",
+        "items": [
+            {
+                "title": "Wirtschaft-Live Trade Fair",
+                "date": "March 18, 2026",
+                "time": "all day",
+                "location": "Vocational School Lower Saxony",
+                "type": "Competition",
+                "description": "Statewide trade fair of student enterprises from all over Lower Saxony with about 20 participating teams. Competitions: best exhibition stand, best trade fair contribution, best image film, and best photo presentation of the business idea."
+            },
+            {
+                "title": "Summer Sale",
+                "date": "June 2026",
+                "time": "End of school year",
+                "location": "BBS I Lüneburg",
+                "type": "Sale",
+                "description": "Sale of remaining products at reduced prices as well as specially manufactured summer items such as insect protection for drinks and other seasonal 3D-printed products."
+            }
+        ],
+        "messeTitle": "Wirtschaft-Live Trade Fair Goals",
+        "messeText": "The trade fair offers young people the opportunity to present their business ideas and products to a broad audience. The goal is to practically promote entrepreneurial thinking and action, strengthen economic competencies, and support exchange between students, schools, business, and politics.",
+        "summerTitle": "Summer Sale Highlights",
+        "summerText": "At the Summer Sale, we not only offer remaining products at reduced prices, but also specially developed summer items. A highlight is our 3D-printed insect protection solutions for drinks."
+    },
+    "archive": {
+        "title": "Archive",
+        "subtitle": "A look back at our past projects, achievements, and developments",
+        "badgeProjects": "Projects",
+        "badgeSuccesses": "Achievements",
+        "badgeDocuments": "Documents",
+        "projectsYear": "Projects {{year}}",
+        "footer": "All projects document our learning process and the development of our student enterprise since its founding.",
+        "items": [
+            {
+                "title": "Sustainable Smartphone Stand",
+                "date": "October 2023",
+                "category": "3D Printing",
+                "description": "Development of an ergonomic smartphone stand made from recycled PLA material",
+                "achievement": "1st place at the Student Innovation Competition"
+            },
+            {
+                "title": "Wood-Tech Fusion",
+                "date": "September 2023",
+                "category": "Cooperation",
+                "description": "First joint project with BBS II - Combination of 3D-printed connectors and woodworking",
+                "achievement": "Successful cooperation launch"
+            },
+            {
+                "title": "Environmental Workshop Series",
+                "date": "June 2023",
+                "category": "Education",
+                "description": "5-part workshop series on microplastics and 3D printing alternatives",
+                "achievement": "45 participating students"
+            },
+            {
+                "title": "Founding of Student Enterprise",
+                "date": "February 2022",
+                "category": "Milestone",
+                "description": "Official founding of the student enterprise at BBS I Technical",
+                "achievement": "Foundation for all subsequent activities"
+            },
+            {
+                "title": "First 3D Printer Acquisition",
+                "date": "April 2022",
+                "category": "Equipment",
+                "description": "Installation of the first 3D printers and setup of the technology room",
+                "achievement": "Basic technical equipment"
+            },
+            {
+                "title": "Prototype Development",
+                "date": "November 2022",
+                "category": "3D Printing",
+                "description": "First independent prototypes for everyday objects",
+                "achievement": "Learning success in product development"
+            }
+        ]
+    },
+    "contact": {
+        "title": "Contact & Location",
+        "subtitle": "Questions, ideas, or interested in a collaboration? We look forward to hearing from you!",
+        "formTitle": "Contact Form",
+        "formSubtitle": "Send us a message - we usually reply within 2-3 business days",
+        "infoTitle": "Contact Information",
+        "infoSubtitle": "Different ways to reach us",
+        "mapTitle": "Map & Directions",
+        "directionsTitle": "Directions",
+        "byCar": "By car:",
+        "byCarText": "A39 exit Lüneburg Nord, then B216 towards city center",
+        "byPublic": "Public transport:",
+        "byPublicText": "Bus lines 5011, 5012 - stop \"BBS I\"",
+        "form": {
+            "name": "Name",
+            "namePlaceholder": "Your name",
+            "email": "Email",
+            "emailPlaceholder": "your.email@example.com",
+            "message": "Message",
+            "messagePlaceholder": "Your message to us...",
+            "submit": "Send Message"
+        },
+        "info": {
+            "email": "Email",
+            "phone": "Phone",
+            "address": "Address",
+            "addressContent": "BBS I - Vocational Schools\nSpillbrunnenweg 1\n21337 Lüneburg"
+        }
+    },
+    "footer": {
+        "title": "Student Enterprise",
+        "subtitle": "BBS I Lüneburg",
+        "description": "Innovative solutions through 3D printing and sustainable woodworking. An educational project of BBS I Lüneburg.",
+        "navigation": "Navigation",
+        "impressum": "Legal Notice",
+        "datenschutz": "Privacy Policy",
+        "contactTitle": "Contact",
+        "footerNav": "Footer navigation",
+        "copyright": "© 2024 Student Enterprise BBS I Lüneburg. All rights reserved.",
+        "educational": "Educational project",
+        "nonCommercial": "Non-commercial",
+        "vatExempt": "VAT-exempt"
+    },
+    "impressum": {
+        "title": "Legal Notice",
+        "subtitle": "Legal information according to § 5 TMG",
+        "schoolName": "Berufsbildende Schulen I Lüneburg",
+        "address": "Address",
+        "addressContent": "Spillbrunnenweg 1\n21337 Lüneburg\nGermany",
+        "contactTitle": "Contact",
+        "phone": "Phone:",
+        "email": "Email:",
+        "representative": "Authorized Representative",
+        "representativeTitle": "Senior Director of Studies",
+        "representativeName": "Heiko Lüdemann",
+        "moreInfo": "More Information",
+        "privacyPolicy": "Privacy Policy",
+        "officialWebsite": "Official Website",
+        "legalNotices": "Legal Notices",
+        "legalNoticesText": "This information is required to be provided in accordance with § 5 TMG (German Telemedia Act)."
+    },
+    "mapTitle": "BBS I Lüneburg Location Map"
+}

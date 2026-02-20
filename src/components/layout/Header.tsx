@@ -1,11 +1,12 @@
 'use client';
 
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
-import { Menu } from 'lucide-react';
+import { Menu, Globe } from 'lucide-react';
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -13,17 +14,23 @@ import {
   NavigationMenuList,
 } from '@/components/ui/navigation-menu';
 
-const navigationItems = [
-  { href: '/#produkte', label: 'Unsere Produkte' },
-  { href: '/#quiz', label: 'Quiz' },
-  { href: '/#about', label: 'Über uns' },
-  { href: '/#termine', label: 'Termine' },
-  { href: '/#archive', label: 'Archiv' },
-  { href: '/#contact', label: 'Kontakt' },
+const navigationKeys = [
+  { href: '/#produkte', key: 'products' },
+  { href: '/#quiz', key: 'quiz' },
+  { href: '/#about', key: 'about' },
+  { href: '/#termine', key: 'events' },
+  { href: '/#archive', key: 'archive' },
+  { href: '/#contact', key: 'contact' },
 ];
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const { t, i18n } = useTranslation();
+
+  const toggleLanguage = () => {
+    const newLang = i18n.language === 'de' ? 'en' : 'de';
+    i18n.changeLanguage(newLang);
+  };
 
   return (
     <header className="sticky top-0 w-full bg-background/95 backdrop-blur-sm z-50 border-b border-border">
@@ -35,50 +42,64 @@ export function Header() {
               <Image src="/images/logo.png" alt="Logo" width={48} height={48} />
             </div>
             <div>
-              <h1 className="text-xl font-bold">Schülerunternehmen</h1>
-              <p className="text-sm text-muted-foreground">BBS I Lüneburg · HA25B</p>
+              <h1 className="text-xl font-bold">{t('header.title')}</h1>
+              <p className="text-sm text-muted-foreground">{t('header.subtitle')}</p>
             </div>
           </Link>
 
-          {/* Desktop Navigation */}
-          <NavigationMenu className="hidden lg:flex" aria-label="Hauptnavigation">
-            <NavigationMenuList>
-              {navigationItems.map(item => (
-                <NavigationMenuItem key={item.href}>
-                  <NavigationMenuLink
-                    href={item.href}
-                    className="text-foreground transition-colors cursor-pointer px-4 py-2 rounded-md hover:bg-accent"
-                  >
-                    {item.label}
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
-              ))}
-            </NavigationMenuList>
-          </NavigationMenu>
-
-          {/* Mobile Navigation */}
-          <Sheet open={isOpen} onOpenChange={setIsOpen}>
-            <SheetTrigger asChild className="lg:hidden">
-              <Button variant="ghost" size="icon" aria-label="Menü öffnen">
-                <Menu className="h-6 w-6" />
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-              <SheetTitle className="sr-only">Menü</SheetTitle>
-              <nav className="flex flex-col space-y-4 mt-8" aria-label="Mobile Navigation">
-                {navigationItems.map(item => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className="text-lg font-medium text-foreground transition-colors px-4 py-2 rounded-md hover:bg-accent"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {item.label}
-                  </Link>
+          <div className="flex items-center gap-2">
+            {/* Desktop Navigation */}
+            <NavigationMenu className="hidden lg:flex" aria-label={t('header.mainNav')}>
+              <NavigationMenuList>
+                {navigationKeys.map(item => (
+                  <NavigationMenuItem key={item.href}>
+                    <NavigationMenuLink
+                      href={item.href}
+                      className="text-foreground transition-colors cursor-pointer px-4 py-2 rounded-md hover:bg-accent"
+                    >
+                      {t(`header.nav.${item.key}`)}
+                    </NavigationMenuLink>
+                  </NavigationMenuItem>
                 ))}
-              </nav>
-            </SheetContent>
-          </Sheet>
+              </NavigationMenuList>
+            </NavigationMenu>
+
+            {/* Language Switcher */}
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={toggleLanguage}
+              className="gap-1.5 text-sm font-medium"
+              aria-label={i18n.language === 'de' ? 'Switch to English' : 'Auf Deutsch wechseln'}
+            >
+              <Globe className="h-4 w-4" />
+              {i18n.language === 'de' ? 'EN' : 'DE'}
+            </Button>
+
+            {/* Mobile Navigation */}
+            <Sheet open={isOpen} onOpenChange={setIsOpen}>
+              <SheetTrigger asChild className="lg:hidden">
+                <Button variant="ghost" size="icon" aria-label={t('header.menuOpen')}>
+                  <Menu className="h-6 w-6" />
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+                <SheetTitle className="sr-only">{t('header.menuTitle')}</SheetTitle>
+                <nav className="flex flex-col space-y-4 mt-8" aria-label={t('header.mobileNav')}>
+                  {navigationKeys.map(item => (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      className="text-lg font-medium text-foreground transition-colors px-4 py-2 rounded-md hover:bg-accent"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {t(`header.nav.${item.key}`)}
+                    </Link>
+                  ))}
+                </nav>
+              </SheetContent>
+            </Sheet>
+          </div>
         </div>
       </div>
     </header>
