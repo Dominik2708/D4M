@@ -15,12 +15,12 @@ import {
 } from '@/components/ui/navigation-menu';
 
 const navigationKeys = [
-  { href: '/#produkte', key: 'products' },
-  { href: '/#quiz', key: 'quiz' },
-  { href: '/#about', key: 'about' },
-  { href: '/#termine', key: 'events' },
-  { href: '/#archive', key: 'archive' },
-  { href: '/#contact', key: 'contact' },
+  { href: '#produkte', key: 'products' },
+  { href: '#quiz', key: 'quiz' },
+  { href: '#about', key: 'about' },
+  { href: '#termine', key: 'events' },
+  { href: '#archive', key: 'archive' },
+  { href: '#contact', key: 'contact' },
 ];
 
 export function Header() {

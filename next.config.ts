@@ -1,5 +1,7 @@
 import type { NextConfig } from 'next';
 
+const basePath = '/D4M';
+
 const nextConfig: NextConfig = {
   output: 'export',
   images: {
@@ -7,8 +9,12 @@ const nextConfig: NextConfig = {
   },
   trailingSlash: true,
 
-  basePath: '/D4M',
-  assetPrefix: '/D4M/',
+  basePath,
+  assetPrefix: `${basePath}/`,
+
+  env: {
+    NEXT_PUBLIC_BASE_PATH: basePath,
+  },
 };
 
 export default nextConfig;
