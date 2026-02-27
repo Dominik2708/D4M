@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { ArrowRight, Play } from 'lucide-react';
+import { BASE_PATH } from '@/lib/constants';
 
 export function HeroSection() {
   const { t } = useTranslation();
@@ -14,7 +15,7 @@ export function HeroSection() {
       <div
         className="absolute inset-0 bg-cover bg-center blur-sm scale-105"
         style={{
-          backgroundImage: `url('${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/images/hero.jpeg')`,
+          backgroundImage: `url('${BASE_PATH}/images/hero.jpeg')`,
         }}
       />
       <div className="absolute inset-0 bg-black/50" />

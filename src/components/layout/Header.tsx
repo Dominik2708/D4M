@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
 import Link from 'next/link';
+import { BASE_PATH } from '@/lib/constants';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
 import { Menu, Globe } from 'lucide-react';
@@ -40,7 +41,7 @@ export function Header() {
           {/* Logo Section */}
           <Link href="/" className="flex items-center space-x-4">
             <div className="w-12 h-12 border-2 rounded-lg flex items-center justify-center">
-              <Image src="/images/logo.png" alt="Logo" width={48} height={48} />
+              <Image src={`${BASE_PATH}/images/logo.png`} alt="Logo" width={48} height={48} />
             </div>
             <div>
               <h1 className="text-xl font-bold">{t('header.title')}</h1>

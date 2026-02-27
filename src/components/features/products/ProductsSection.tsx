@@ -5,26 +5,29 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Image from 'next/image';
 import Link from 'next/link';
+import { BASE_PATH } from '@/lib/constants';
+
+const BASE = BASE_PATH;
 
 const categoryMeta = [
   {
     gradientFrom: 'from-blue-400',
     gradientTo: 'to-blue-600',
     images: [
-      '/images/plastic/keychain_1.jpeg',
-      '/images/plastic/keychain_2.jpeg',
-      '/images/plastic/keychain_3.jpeg',
-      '/images/plastic/keychain_4.jpeg',
+      `${BASE}/images/plastic/keychain_1.jpeg`,
+      `${BASE}/images/plastic/keychain_2.jpeg`,
+      `${BASE}/images/plastic/keychain_3.jpeg`,
+      `${BASE}/images/plastic/keychain_4.jpeg`,
     ],
   },
   {
     gradientFrom: 'from-amber-400',
     gradientTo: 'to-orange-600',
     images: [
-      '/images/wood/birdhouse_1.jpeg',
-      '/images/wood/jewlerycase_1.jpeg',
-      '/images/wood/keyholder_1.jpeg',
-      '/images/wood/pictureframe_1.jpeg',
+      `${BASE}/images/wood/birdhouse_1.jpeg`,
+      `${BASE}/images/wood/jewlerycase_1.jpeg`,
+      `${BASE}/images/wood/keyholder_1.jpeg`,
+      `${BASE}/images/wood/pictureframe_1.jpeg`,
     ],
   },
 ];

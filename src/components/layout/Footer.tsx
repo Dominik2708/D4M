@@ -6,6 +6,7 @@ import { Separator } from '@/components/ui/separator';
 import { MapPin, Phone, Mail } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { BASE_PATH } from '@/lib/constants';
 
 export function Footer() {
   const { t } = useTranslation();
@@ -38,7 +39,7 @@ export function Footer() {
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
               <div className="w-10 h-10 bg-white border-2 rounded-lg flex items-center justify-center">
-                <Image src="/images/logo.png" alt="Logo" width={32} height={32} />
+                <Image src={`${BASE_PATH}/images/logo.png`} alt="Logo" width={32} height={32} />
               </div>
               <div>
                 <h3 className="font-bold text-lg">{t('footer.title')}</h3>
