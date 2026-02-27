@@ -6,6 +6,9 @@ const nextConfig: NextConfig = {
     unoptimized: true,
   },
   trailingSlash: true,
+
+  basePath: '/D4M',
+  assetPrefix: '/D4M/',
 };
 
 export default nextConfig;
