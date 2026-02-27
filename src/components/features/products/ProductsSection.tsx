@@ -115,10 +115,7 @@ export function ProductsSection() {
                           </h4>
                           <p className="text-gray-700 text-sm">
                             {t('productsSection.customText')}{' '}
-                            <Link
-                              href="#contact"
-                              className="font-semibold text-blue-600 underline"
-                            >
+                            <Link href="#contact" className="font-semibold text-blue-600 underline">
                               {t('productsSection.customLinkText')}
                             </Link>
                             .

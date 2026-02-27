@@ -13,7 +13,9 @@ export function HeroSection() {
       {/* Background image – blurred & darkened */}
       <div
         className="absolute inset-0 bg-cover bg-center blur-sm scale-105"
-        style={{ backgroundImage: `url('${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/images/hero.jpeg')` }}
+        style={{
+          backgroundImage: `url('${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/images/hero.jpeg')`,
+        }}
       />
       <div className="absolute inset-0 bg-black/50" />
 
