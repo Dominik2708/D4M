@@ -13,7 +13,9 @@
         "menuOpen": "Menü öffnen",
         "menuTitle": "Menü",
         "mobileNav": "Mobile Navigation",
-        "mainNav": "Hauptnavigation"
+        "mainNav": "Hauptnavigation",
+        "highContrastEnable": "Hohen Kontrast aktivieren",
+        "highContrastDisable": "Hohen Kontrast deaktivieren"
     },
     "hero": {
         "title": "Schülerunternehmen",

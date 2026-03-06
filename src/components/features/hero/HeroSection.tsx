@@ -10,7 +10,11 @@ export function HeroSection() {
   const { t } = useTranslation();
 
   return (
-    <section className="relative min-h-screen flex items-center px-4 overflow-hidden">
+    <section
+      className="relative min-h-screen flex items-center px-4 overflow-hidden"
+      aria-labelledby="hero-heading"
+      role="region"
+    >
       {/* Background image – blurred & darkened */}
       <div
         className="absolute inset-0 bg-cover bg-center blur-sm scale-105"
@@ -22,7 +26,7 @@ export function HeroSection() {
 
       <div className="container mx-auto relative z-10">
         <div className="max-w-4xl mx-auto text-center pt-24 sm:pt-28 md:pt-0 md:transform md:-translate-y-8 lg:-translate-y-5">
-          <h1 className="text-4xl md:text-6xl lg:text-6xl font-bold text-white mb-4 leading-tight">
+          <h1 id="hero-heading" className="text-4xl md:text-6xl lg:text-6xl font-bold text-white mb-4 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-300">
               {t('hero.title')}
             </span>

@@ -82,10 +82,10 @@ export function ArchiveSection() {
   );
 
   return (
-    <section id="archive" className="py-20 px-4 bg-gray-50">
+    <section id="archive" className="py-20 px-4 bg-gray-50" aria-labelledby="archive-heading">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">{t('archive.title')}</h2>
+          <h2 id="archive-heading" className="text-4xl font-bold text-gray-900 mb-4">{t('archive.title')}</h2>
           <p className="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
             {t('archive.subtitle')}
           </p>
