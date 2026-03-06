@@ -7,7 +7,8 @@ import Link from 'next/link';
 import { BASE_PATH } from '@/lib/constants';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
-import { Menu, Globe } from 'lucide-react';
+import { Menu, Globe, Contrast } from 'lucide-react';
+import { useHighContrast } from '@/lib/HighContrastContext';
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -27,6 +28,7 @@ const navigationKeys = [
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const { t, i18n } = useTranslation();
+  const { highContrast, toggleHighContrast } = useHighContrast();
 
   const toggleLanguage = () => {
     const newLang = i18n.language === 'de' ? 'en' : 'de';
@@ -78,6 +80,18 @@ export function Header() {
             >
               <Globe className="h-4 w-4" />
               {i18n.language === 'de' ? 'EN' : 'DE'}
+            </Button>
+
+            {/* High Contrast Toggle */}
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={toggleHighContrast}
+              className="gap-1.5 text-sm font-medium"
+              aria-label={highContrast ? t('header.highContrastDisable') : t('header.highContrastEnable')}
+              aria-pressed={highContrast}
+            >
+              <Contrast className="h-4 w-4" />
             </Button>
 
             {/* Mobile Navigation */}

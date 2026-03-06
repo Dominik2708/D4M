@@ -25,6 +25,9 @@ body {
   font-family: var(--font-avenir);
   background-color: var(--color-background);
   color: var(--color-foreground);
+  font-size: 1.0625rem; /* ~17px instead of 16px */
+  font-weight: 450;     /* slightly heavier than normal 400 */
+  line-height: 1.7;
 }
 
 @theme inline {
@@ -172,4 +175,127 @@ body {
     animation: none !important;
     transition-duration: 0s !important;
   }
+}
+
+/* ============================================================
+   HIGH CONTRAST ACCESSIBILITY MODE
+   Activated by adding the .high-contrast class to <html>
+   ============================================================ */
+
+/* Override all CSS custom properties used by Tailwind/shadcn */
+.high-contrast {
+  --background: #ffffff;
+  --foreground: #000000;
+  --card: #ffffff;
+  --card-foreground: #000000;
+  --popover: #ffffff;
+  --popover-foreground: #000000;
+  --primary: #000000;
+  --primary-foreground: #ffffff;
+  --secondary: #ffffff;
+  --secondary-foreground: #000000;
+  --muted: #ffffff;
+  --muted-foreground: #000000;
+  --accent: #ffffff;
+  --accent-foreground: #000000;
+  --destructive: #000000;
+  --border: #000000;
+  --input: #000000;
+  --ring: #000000;
+}
+
+/* Force white background and black text on every element */
+.high-contrast,
+.high-contrast * {
+  background-color: #ffffff !important;
+  background-image: none !important;
+  color: #000000 !important;
+  border-color: #000000 !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+}
+
+/* Remove gradient text (bg-clip-text / text-transparent) */
+.high-contrast [class*='bg-clip'],
+.high-contrast [class*='text-transparent'] {
+  -webkit-background-clip: unset !important;
+  background-clip: unset !important;
+  color: #000000 !important;
+}
+
+/* Headings stay bold – normal weight is readable but light/thin is not */
+.high-contrast h1,
+.high-contrast h2,
+.high-contrast h3,
+.high-contrast h4,
+.high-contrast h5,
+.high-contrast h6 {
+  font-weight: 700 !important;
+}
+
+/* Body text: enforce normal (400) weight – no light/thin fonts */
+.high-contrast p,
+.high-contrast span,
+.high-contrast li,
+.high-contrast td,
+.high-contrast th,
+.high-contrast label,
+.high-contrast div {
+  font-weight: 400 !important;
+}
+
+/* Links must be underlined and clearly visible */
+.high-contrast a,
+.high-contrast a:visited,
+.high-contrast a:hover {
+  color: #000000 !important;
+  text-decoration: underline !important;
+}
+
+/* Buttons: clear border, no gradient fill */
+.high-contrast button {
+  border: 2px solid #000000 !important;
+  font-weight: 600 !important;
+}
+
+/* Active/pressed state for buttons */
+.high-contrast button[aria-pressed='true'] {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+/* Form inputs need clearly visible borders */
+.high-contrast input,
+.high-contrast textarea,
+.high-contrast select {
+  border: 2px solid #000000 !important;
+}
+
+/* Strong focus ring – essential in high contrast */
+.high-contrast :focus-visible {
+  outline: 4px solid #000000 !important;
+  outline-offset: 4px !important;
+}
+
+/* Section borders give visual rhythm when backgrounds are gone */
+.high-contrast section {
+  border-bottom: 2px solid #000000 !important;
+}
+
+/* Images: keep visible, add a border for definition */
+.high-contrast img {
+  border: 1px solid #000000 !important;
+  filter: contrast(1.1) !important;
+}
+
+/* SVG icons inherit black colour */
+.high-contrast svg {
+  color: #000000 !important;
+}
+
+/* Nav links: underline on hover for clear interactivity cue */
+.high-contrast nav a:hover {
+  text-decoration: underline !important;
 }

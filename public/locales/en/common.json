@@ -13,7 +13,9 @@
         "menuOpen": "Open menu",
         "menuTitle": "Menu",
         "mobileNav": "Mobile Navigation",
-        "mainNav": "Main navigation"
+        "mainNav": "Main navigation",
+        "highContrastEnable": "Enable high contrast",
+        "highContrastDisable": "Disable high contrast"
     },
     "hero": {
         "title": "Student Enterprise",

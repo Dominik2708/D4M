@@ -14,10 +14,10 @@ export function AboutSection() {
   }>;
 
   return (
-    <section id="about" className="py-20 px-4 bg-white">
+    <section id="about" className="py-20 px-4 bg-white" aria-labelledby="about-heading">
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">{t('about.title')}</h2>
+          <h2 id="about-heading" className="text-4xl font-bold text-gray-900 mb-4">{t('about.title')}</h2>
           <p className="text-gray-600 text-lg">{t('about.subtitle')}</p>
         </div>
 

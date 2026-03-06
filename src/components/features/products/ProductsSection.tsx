@@ -42,10 +42,10 @@ export function ProductsSection() {
   }>;
 
   return (
-    <section id="produkte" className="py-20 px-4 bg-gray-50">
+    <section id="produkte" className="py-20 px-4 bg-gray-50" aria-labelledby="products-heading">
       <div className="container mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">{t('productsSection.title')}</h2>
+          <h2 id="products-heading" className="text-4xl font-bold text-gray-900 mb-4">{t('productsSection.title')}</h2>
           <p className="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
             {t('productsSection.subtitle')}
           </p>
