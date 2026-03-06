@@ -70,24 +70,24 @@ export function Header() {
               </NavigationMenuList>
             </NavigationMenu>
 
-            {/* Language Switcher */}
+            {/* Language Switcher – desktop only */}
             <Button
               variant="ghost"
               size="sm"
               onClick={toggleLanguage}
-              className="gap-1.5 text-sm font-medium"
+              className="hidden lg:flex gap-1.5 text-sm font-medium"
               aria-label={i18n.language === 'de' ? 'Switch to English' : 'Auf Deutsch wechseln'}
             >
               <Globe className="h-4 w-4" />
               {i18n.language === 'de' ? 'EN' : 'DE'}
             </Button>
 
-            {/* High Contrast Toggle */}
+            {/* High Contrast Toggle – desktop only */}
             <Button
               variant="ghost"
               size="sm"
               onClick={toggleHighContrast}
-              className="gap-1.5 text-sm font-medium"
+              className="hidden lg:flex gap-1.5 text-sm font-medium"
               aria-label={highContrast ? t('header.highContrastDisable') : t('header.highContrastEnable')}
               aria-pressed={highContrast}
             >
@@ -114,6 +114,28 @@ export function Header() {
                       {t(`header.nav.${item.key}`)}
                     </Link>
                   ))}
+
+                  <div className="border-t border-border pt-4 flex flex-col space-y-2">
+                    <Button
+                      variant="ghost"
+                      onClick={toggleLanguage}
+                      className="justify-start gap-2 text-sm font-medium"
+                      aria-label={i18n.language === 'de' ? 'Switch to English' : 'Auf Deutsch wechseln'}
+                    >
+                      <Globe className="h-4 w-4" />
+                      {i18n.language === 'de' ? 'English' : 'Deutsch'}
+                    </Button>
+                    <Button
+                      variant="ghost"
+                      onClick={toggleHighContrast}
+                      className="justify-start gap-2 text-sm font-medium"
+                      aria-label={highContrast ? t('header.highContrastDisable') : t('header.highContrastEnable')}
+                      aria-pressed={highContrast}
+                    >
+                      <Contrast className="h-4 w-4" />
+                      {highContrast ? t('header.highContrastDisable') : t('header.highContrastEnable')}
+                    </Button>
+                  </div>
                 </nav>
               </SheetContent>
             </Sheet>
