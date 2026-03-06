@@ -42,7 +42,7 @@ export function HeroSection() {
             {t('hero.description')}
           </p>
 
-          <div className="flex gap-4 justify-center flex-wrap">
+          <div className="flex gap-4 justify-center flex-wrap pb-16 sm:pb-20 md:pb-0">
             <Button asChild size="lg" className="gap-2 text-lg px-8 py-3">
               <a href="#produkte">
                 {t('hero.productsButton')}

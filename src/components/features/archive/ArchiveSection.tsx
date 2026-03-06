@@ -16,14 +16,14 @@ interface ArchiveItem {
 const typeMap: Record<string, { type: string }> = {
   '3D-Druck': { type: 'project' },
   '3D Printing': { type: 'project' },
-  'Kooperation': { type: 'project' },
-  'Cooperation': { type: 'project' },
-  'Bildung': { type: 'success' },
-  'Education': { type: 'success' },
-  'Meilenstein': { type: 'milestone' },
-  'Milestone': { type: 'milestone' },
-  'Ausstattung': { type: 'equipment' },
-  'Equipment': { type: 'equipment' },
+  Kooperation: { type: 'project' },
+  Cooperation: { type: 'project' },
+  Bildung: { type: 'success' },
+  Education: { type: 'success' },
+  Meilenstein: { type: 'milestone' },
+  Milestone: { type: 'milestone' },
+  Ausstattung: { type: 'equipment' },
+  Equipment: { type: 'equipment' },
 };
 
 const getIcon = (type: string) => {
@@ -60,20 +60,26 @@ export function ArchiveSection() {
   const { t } = useTranslation();
   const archiveItems = t('archive.items', { returnObjects: true }) as ArchiveItem[];
 
+  const getYear = (date: string): number => {
+    const match = date.match(/(\d{4})/);
+    return match ? parseInt(match[1], 10) : 0;
+  };
+
   // Sort by year (most recent first)
-  const sortedItems = [...archiveItems].sort(
-    (a, b) => new Date(b.date).getFullYear() - new Date(a.date).getFullYear()
-  );
+  const sortedItems = [...archiveItems].sort((a, b) => getYear(b.date) - getYear(a.date));
 
   // Group by year
-  const itemsByYear = sortedItems.reduce((acc, item) => {
-    const year = new Date(item.date).getFullYear();
-    if (!acc[year]) {
-      acc[year] = [];
-    }
-    acc[year].push(item);
-    return acc;
-  }, {} as Record<number, ArchiveItem[]>);
+  const itemsByYear = sortedItems.reduce(
+    (acc, item) => {
+      const year = getYear(item.date);
+      if (!acc[year]) {
+        acc[year] = [];
+      }
+      acc[year].push(item);
+      return acc;
+    },
+    {} as Record<number, ArchiveItem[]>
+  );
 
   return (
     <section id="archive" className="py-20 px-4 bg-gray-50">
@@ -145,9 +151,7 @@ export function ArchiveSection() {
 
         {/* Archive Footer */}
         <div className="text-center mt-16">
-          <p className="text-gray-600">
-            {t('archive.footer')}
-          </p>
+          <p className="text-gray-600">{t('archive.footer')}</p>
         </div>
       </div>
     </section>
