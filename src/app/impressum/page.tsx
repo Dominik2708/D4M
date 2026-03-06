@@ -3,6 +3,7 @@
 import { useTranslation } from 'react-i18next';
 import { Header, Footer } from '@/components';
 import { MapPin, Phone, User, Shield, Globe } from 'lucide-react';
+import Link from 'next/link';
 
 export default function ImpressumPage() {
   const { t } = useTranslation();
@@ -37,12 +38,14 @@ export default function ImpressumPage() {
                           {t('impressum.address')}
                         </h3>
                         <address className="not-italic text-gray-600 leading-relaxed pl-7">
-                          Spillbrunnenweg 1<br />
-                          21337 Lüneburg
-                          <br />
-                          {t('impressum.addressContent', '').includes('Germany')
-                            ? 'Germany'
-                            : 'Deutschland'}
+                          {t('impressum.addressContent')
+                            .split('\n')
+                            .map((line, i) => (
+                              <span key={i}>
+                                {line}
+                                <br />
+                              </span>
+                            ))}
                         </address>
                       </div>
 
@@ -93,32 +96,32 @@ export default function ImpressumPage() {
 
             {/* Sidebar */}
             <div className="space-y-6">
-              <div className="bg-blue-50 rounded-2xl border border-blue-200 p-6">
-                <h3 className="text-lg font-semibold text-blue-900 mb-4">
+              <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-6">
+                <h3 className="text-lg font-semibold text-gray-900 mb-4">
                   {t('impressum.moreInfo')}
                 </h3>
-                <div className="space-y-3">
-                  <a
+                <div className="space-y-2">
+                  <Link
                     href="/datenschutz"
-                    className="flex items-center text-blue-700 hover:text-blue-900 transition-colors p-2 rounded-lg hover:bg-blue-100"
+                    className="flex items-center text-gray-600 hover:text-gray-900 transition-colors p-2 rounded-lg hover:bg-gray-100"
                   >
-                    <Shield className="w-4 h-4 mr-2" />
+                    <Shield className="w-4 h-4 mr-2 flex-shrink-0" />
                     {t('impressum.privacyPolicy')}
-                  </a>
+                  </Link>
                   <a
                     href="https://www.bbs1-lueneburg.de"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center text-blue-700 hover:text-blue-900 transition-colors p-2 rounded-lg hover:bg-blue-100"
+                    className="flex items-center text-gray-600 hover:text-gray-900 transition-colors p-2 rounded-lg hover:bg-gray-100"
                   >
-                    <Globe className="w-4 h-4 mr-2" />
+                    <Globe className="w-4 h-4 mr-2 flex-shrink-0" />
                     {t('impressum.officialWebsite')}
                   </a>
                 </div>
               </div>
 
-              <div className="bg-gray-50 rounded-2xl border border-gray-200 p-6">
-                <h3 className="text-lg font-semibold text-gray-800 mb-3">
+              <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-6">
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">
                   {t('impressum.legalNotices')}
                 </h3>
                 <p className="text-sm text-gray-600 leading-relaxed">

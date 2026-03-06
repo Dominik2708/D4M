@@ -16,12 +16,12 @@ import {
 } from '@/components/ui/navigation-menu';
 
 const navigationKeys = [
-  { href: '#produkte', key: 'products' },
-  { href: '#quiz', key: 'quiz' },
-  { href: '#about', key: 'about' },
-  { href: '#termine', key: 'events' },
-  { href: '#archive', key: 'archive' },
-  { href: '#contact', key: 'contact' },
+  { href: '/#produkte', key: 'products' },
+  { href: '/#quiz', key: 'quiz' },
+  { href: '/#about', key: 'about' },
+  { href: '/#termine', key: 'events' },
+  { href: '/#archive', key: 'archive' },
+  { href: '/#contact', key: 'contact' },
 ];
 
 export function Header() {
@@ -55,11 +55,13 @@ export function Header() {
               <NavigationMenuList>
                 {navigationKeys.map(item => (
                   <NavigationMenuItem key={item.href}>
-                    <NavigationMenuLink
-                      href={item.href}
-                      className="text-foreground transition-colors cursor-pointer px-4 py-2 rounded-md hover:bg-accent"
-                    >
-                      {t(`header.nav.${item.key}`)}
+                    <NavigationMenuLink asChild>
+                      <Link
+                        href={item.href}
+                        className="text-foreground transition-colors cursor-pointer px-4 py-2 rounded-md hover:bg-accent"
+                      >
+                        {t(`header.nav.${item.key}`)}
+                      </Link>
                     </NavigationMenuLink>
                   </NavigationMenuItem>
                 ))}
