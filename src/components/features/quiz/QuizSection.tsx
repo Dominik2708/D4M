@@ -11,6 +11,24 @@ interface QuizQuestion {
   options: string[];
 }
 
+interface ShuffledQuestion {
+  question: string;
+  options: string[];
+  correctIndex: number;
+}
+
+function shuffleQuestions(questions: QuizQuestion[]): ShuffledQuestion[] {
+  return questions.map(q => {
+    const correct = q.options[0];
+    const shuffled = [...q.options];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return { question: q.question, options: shuffled, correctIndex: shuffled.indexOf(correct) };
+  });
+}
+
 export function QuizSection() {
   const { t } = useTranslation();
   const questions = t('quiz.questions', { returnObjects: true }) as QuizQuestion[];
@@ -32,6 +50,7 @@ export function QuizSection() {
   };
 
   const [doubleIndices, setDoubleIndices] = useState<number[]>(() => getDoubleIndices());
+  const [shuffled, setShuffled] = useState<ShuffledQuestion[]>(() => shuffleQuestions(questions));
 
   const maxScore = questions.length + doubleIndices.length;
 
@@ -41,8 +60,8 @@ export function QuizSection() {
   };
 
   const handleNextQuestion = () => {
-    // correct answer is always index 0
-    if (selectedAnswer === 0) {
+    const correctIndex = shuffled[currentQuestion].correctIndex;
+    if (selectedAnswer === correctIndex) {
       const pointsToAdd = doubleIndices.includes(currentQuestion) ? 2 : 1;
       setScore(s => s + pointsToAdd);
     }
@@ -63,6 +82,7 @@ export function QuizSection() {
     setShowResult(false);
     setQuizCompleted(false);
     setDoubleIndices(getDoubleIndices());
+    setShuffled(shuffleQuestions(questions));
   };
 
   if (quizCompleted) {
@@ -71,7 +91,9 @@ export function QuizSection() {
         <div className="container mx-auto max-w-4xl">
           <Card className="text-center">
             <CardHeader>
-              <CardTitle id="quiz-heading-done" className="text-3xl mb-4">{t('quiz.completed')}</CardTitle>
+              <CardTitle id="quiz-heading-done" className="text-3xl mb-4">
+                {t('quiz.completed')}
+              </CardTitle>
               <Badge variant="secondary" className="text-lg px-4 py-2 m-auto ">
                 Score: {score}/{maxScore}
               </Badge>
@@ -99,7 +121,9 @@ export function QuizSection() {
     <section id="quiz" className="py-20 px-4 bg-blue-50" aria-labelledby="quiz-heading">
       <div className="container mx-auto max-w-4xl">
         <div className="text-center mb-12">
-          <h2 id="quiz-heading" className="text-4xl font-bold text-primary mb-4">{t('quiz.title')}</h2>
+          <h2 id="quiz-heading" className="text-4xl font-bold text-primary mb-4">
+            {t('quiz.title')}
+          </h2>
           <p className="text-muted-foreground text-lg">{t('quiz.subtitle')}</p>
         </div>
 
@@ -133,13 +157,13 @@ export function QuizSection() {
 
           <CardContent className="space-y-6">
             <h3 className="text-xl font-semibold text-primary">
-              {questions[currentQuestion].question}
+              {shuffled[currentQuestion].question}
             </h3>
 
             <div className="grid gap-3">
-              {questions[currentQuestion].options.map((option, index) => {
+              {shuffled[currentQuestion].options.map((option, index) => {
                 const isAnswered = selectedAnswer !== null;
-                const correctIndex = 0;
+                const correctIndex = shuffled[currentQuestion].correctIndex;
                 let extra = '';
                 if (isAnswered) {
                   if (index === correctIndex) {
