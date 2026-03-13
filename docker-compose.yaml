@@ -1,0 +1,9 @@
+services:
+  d4m:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: d4m
+    ports:
+      - '8080:80'
+    restart: unless-stopped
