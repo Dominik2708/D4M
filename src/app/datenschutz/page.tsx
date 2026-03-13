@@ -8,7 +8,7 @@ export default function DatenschutzPage() {
   return (
     <div>
       <Header />
-      <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 pt-24 pb-12">
+      <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 pt-24 pb-12 overflow-x-hidden">
         <div className="max-w-6xl mx-auto px-4">
           {/* Headline */}
           <div className="text-center mb-16">
@@ -22,7 +22,7 @@ export default function DatenschutzPage() {
             {/* Main Content */}
             <div className="lg:col-span-2">
               <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-8">
-                <article className="prose prose-gray max-w-none [&_h2]:text-xl [&_h2]:font-bold [&_h2]:text-gray-900 [&_h2]:mt-8 [&_h2]:mb-4 [&_h2]:pb-2 [&_h2]:border-b [&_h2]:border-gray-200 [&_h3]:text-lg [&_h3]:font-semibold [&_h3]:text-gray-800 [&_h3]:mt-6 [&_h3]:mb-3 [&_h4]:font-semibold [&_h4]:text-gray-700 [&_h4]:mt-4 [&_h4]:mb-2 [&_p]:text-gray-600 [&_p]:leading-relaxed [&_p]:mb-4 [&_ul]:text-gray-600 [&_ul]:space-y-2 [&_li]:leading-relaxed [&_a]:text-blue-600 [&_a]:hover:text-blue-800 [&_a]:hover:underline">
+                <article className="prose prose-gray max-w-none [&_h2]:text-xl [&_h2]:font-bold [&_h2]:text-gray-900 [&_h2]:mt-8 [&_h2]:mb-4 [&_h2]:pb-2 [&_h2]:border-b [&_h2]:border-gray-200 [&_h3]:text-lg [&_h3]:font-semibold [&_h3]:text-gray-800 [&_h3]:mt-6 [&_h3]:mb-3 [&_h4]:font-semibold [&_h4]:text-gray-700 [&_h4]:mt-4 [&_h4]:mb-2 [&_p]:text-gray-600 [&_p]:leading-relaxed [&_p]:mb-4 [&_ul]:text-gray-600 [&_ul]:space-y-2 [&_li]:leading-relaxed [&_a]:text-blue-600 [&_a]:hover:text-blue-800 [&_a]:hover:underline [&_a]:break-all">
                   <h2>1. Datenschutz auf einen Blick</h2>
 
                   <h3>Allgemeine Hinweise</h3>
